@@ -1,5 +1,35 @@
-.Box {
-  background: black;
-  color: white;
-  padding: 2rem;
+.Navbar {
+  background: white;
+  color: black;
+  width: 100vw;
+  height: 60px;
+  z-index: 1;
+  min-height: unset;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 10%;
+  background-color: white;
+}
+
+.img {
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+}
+
+.navbar_contents {
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contentBox {
+  width: 100px;
+  height: 60px;
+  background-color: blue;
 }
