@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./navbar.module.css";
 import homeImg from "./home.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   return (
@@ -13,7 +15,7 @@ function Navbar() {
         <div className={styles.contentBox}>커뮤니티</div>
         <input type="text" className={styles.searchBar} placeholder="" />
         <span className={styles.search__icon}>
-          <i class="far fa-search"></i>
+        <FontAwesomeIcon icon={faSearch} className="search" />
         </span>
       </div>
     <div className={styles.container}></div>
