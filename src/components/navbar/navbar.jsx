@@ -15,8 +15,11 @@ function Navbar() {
         <div className={styles.contentBox}>커뮤니티</div>
         <input type="text" className={styles.searchBar} placeholder="" />
         <span className={styles.search__icon}>
-        <FontAwesomeIcon icon={faSearch} className="search" />
+          <FontAwesomeIcon icon={faSearch} className="search" />
         </span>
+        <div className={styles.loginBox}>
+          <button className={styles.loginbut}>로그인</button>
+        </div>
       </div>
     <div className={styles.container}></div>
   </div>

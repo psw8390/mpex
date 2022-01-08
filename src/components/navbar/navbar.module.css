@@ -33,3 +33,8 @@
   height: 60px;
   background-color: blue;
 }
+
+.loginBox {
+  width: 100px;
+  background-color: white;
+}
