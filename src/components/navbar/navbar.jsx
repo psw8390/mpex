@@ -18,7 +18,7 @@ function Navbar() {
           <FontAwesomeIcon icon={faSearch} className="search" />
         </span>
         <div className={styles.loginBox}>
-          <button className={styles.loginbut}>로그인</button>
+          <button className={styles.loginbtn}>로그인</button>
         </div>
       </div>
     <div className={styles.container}></div>

@@ -37,4 +37,12 @@
 .loginBox {
   width: 100px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginbtn {
+  color: blue;
+  background-color: white;
 }
