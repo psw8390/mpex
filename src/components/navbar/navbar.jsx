@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./navbar.module.css";
-import homeImg from "./home.png";
+import homeImg from "./home.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,9 +14,9 @@ function Navbar() {
         <div className={styles.contentBox}>공지사항</div>
         <div className={styles.contentBox}>커뮤니티</div>
         <input type="text" className={styles.searchBar} placeholder="" />
-        <span className={styles.search__icon}>
-          <FontAwesomeIcon icon={faSearch} className="search" />
-        </span>
+          <span className={styles.search__icon} placeholder="">
+            <FontAwesomeIcon icon={faSearch} className="search" />
+          </span>
         <div className={styles.loginBox}>
           <button className={styles.loginbtn}>로그인</button>
         </div>
