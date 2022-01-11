@@ -13,10 +13,13 @@ function Navbar() {
         <div className={styles.contentBox}>매칭신청</div>
         <div className={styles.contentBox}>공지사항</div>
         <div className={styles.contentBox}>커뮤니티</div>
-        <input type="text" className={styles.searchBar} placeholder="" />
+        <div className={styles.contentBox}>MPEX</div>
+        <div className={styles.searchBarBox}>
+          <input type="text" className={styles.searchBar} placeholder="" />
           <span className={styles.search__icon} placeholder="">
             <FontAwesomeIcon icon={faSearch} className="search" />
           </span>
+        </div>
         <div className={styles.loginBox}>
           <button className={styles.loginbtn}>로그인</button>
         </div>
