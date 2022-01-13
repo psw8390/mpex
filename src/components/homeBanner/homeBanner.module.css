@@ -2,9 +2,26 @@
   width: 100%;
   height: 40vh;
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .homeBannerImg {
   width: 100%;
   height: 100%;
+}
+
+.paginationContainer {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+}
+
+.paginationController {
+  width: 100px;
+}
+
+.pageNumber {
+  color: white;
 }

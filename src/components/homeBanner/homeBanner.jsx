@@ -6,6 +6,13 @@ function HomeBanner() {
   return (
     <div className={styles.homeBannerBox}>
         <img className={styles.homeBannerImg} alt="homeBaneer" src={homeBannerImg} />
+        <div className={styles.paginationContainer}>
+          <div className={styles.paginationController}>
+            <div className={styles.pageNumber} >
+              1/9
+            </div>
+          </div>
+        </div>
     </div>
   )
 }
