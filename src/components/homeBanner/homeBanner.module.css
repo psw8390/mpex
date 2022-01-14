@@ -19,9 +19,22 @@
 }
 
 .paginationController {
-  width: 100px;
+  width: 160px;
+  height: 60px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pageNumber {
+  width: 130px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7f7f7f;
   color: white;
+  border-radius: 20px;
 }

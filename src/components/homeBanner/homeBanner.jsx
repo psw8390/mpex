@@ -9,7 +9,9 @@ function HomeBanner() {
         <div className={styles.paginationContainer}>
           <div className={styles.paginationController}>
             <div className={styles.pageNumber} >
-              1/9
+              <span>1</span>
+              <span>/</span>
+              <span>9</span>
             </div>
           </div>
         </div>
