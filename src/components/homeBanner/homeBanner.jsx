@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./homeBanner.module.css";
 import homeBannerImg from "./homeBannerImg.jpeg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight, faPause } from "@fortawesome/free-solid-svg-icons";
 
 function HomeBanner() {
   return (
@@ -12,6 +14,9 @@ function HomeBanner() {
               <span>1</span>
               <span>/</span>
               <span>9</span>
+              <FontAwesomeIcon icon={faAngleLeft} className="faAngleLeft" />
+              <FontAwesomeIcon icon={faPause} className="faPause" />
+              <FontAwesomeIcon icon={faAngleRight} className="faAngleRight" />
             </div>
           </div>
         </div>
