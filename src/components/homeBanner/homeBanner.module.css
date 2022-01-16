@@ -38,3 +38,19 @@
   color: white;
   border-radius: 20px;
 }
+
+.numberBox {
+  display: flex;
+  width: 50px;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.pageNumberController {
+  width: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 20px;
+  margin-right: 10px;
+}
