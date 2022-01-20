@@ -4,7 +4,7 @@ import styles from "./searchbar.module.css";
 function Searchbar() {
   return (
     <div className={styles.searchBox}>
-      10000
+      <div className={styles.searchBoxTitle}>MPEX 에서 가치를 높이세요</div>
     </div>
   )
 }
