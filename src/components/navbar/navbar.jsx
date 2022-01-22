@@ -17,7 +17,7 @@ function Navbar() {
         <div className={styles.searchBarBox}>
           <input type="text" className={styles.searchBar} placeholder="" />
           <span className={styles.search__icon} placeholder="">
-            <FontAwesomeIcon icon={faSearch} className="search" />
+            <FontAwesomeIcon icon={faSearch} />
           </span>
         </div>
         <div className={styles.loginBox}>
