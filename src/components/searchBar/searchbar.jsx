@@ -11,7 +11,7 @@ function Searchbar() {
       </h1>
       <div class="search_wrapper">
         <input className={styles.searchInput} type="text" placeholder="함께하고 싶은 운동을 입력해보세요." />
-          <button className="button_submit">
+          <button className={styles.buttonSubmit}>
             <span className="icon">
               <FontAwesomeIcon icon={faSearch} />
             </span>
