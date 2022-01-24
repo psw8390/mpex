@@ -23,6 +23,7 @@
   font-weight: 400;
   line-height: 1.5;
   position: relative;
+  margin-top: 60px;
 }
 
 .searchInput {
@@ -34,4 +35,13 @@
   background-color: rgba(29, 192, 120, 0.12);
   border: 1px solid rgba(29, 192, 120, 0.24);
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+}
+
+.buttonSubmit {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  border: hidden;
+  background-color: transparent;
+  cursor: pointer;
 }
