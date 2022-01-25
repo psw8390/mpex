@@ -23,7 +23,6 @@
   font-weight: 400;
   line-height: 1.5;
   position: relative;
-  margin-top: 60px;
 }
 
 .searchInput {
@@ -43,5 +42,31 @@
   font-size: 1.2rem;
   border: hidden;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.tagSection {
+  width: 100%;
+  height: 60px;
+  color: black;
+  margin-top: 20px;
+  display: flex;
+}
+
+.tagSectionContainer {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8ebee;
+  list-style: none;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.tagSectionContainer a {
+  text-decoration: none;
+  color: currentColor;
   cursor: pointer;
 }
