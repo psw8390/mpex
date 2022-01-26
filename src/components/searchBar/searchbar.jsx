@@ -32,6 +32,16 @@ function Searchbar() {
               <a href="https://naver.com">#야구</a>
             </li>
           </ul>
+          <ul className={styles.tagSectionContainer}>
+            <li className={styles.tagSectionItem}>
+              <a href="https://naver.com">#배구</a>
+            </li>
+          </ul>
+          <ul className={styles.tagSectionContainer}>
+            <li className={styles.tagSectionItem}>
+              <a href="https://naver.com">#골프</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -4,8 +4,7 @@ import styles from "./footer.module.css";
 function Footer() {
   return (
     <div className={styles.footerBox}>
-                <div className={styles.divider}>
-          </div>
+      <div className={styles.divider}></div>
       10000
     </div>
   )
