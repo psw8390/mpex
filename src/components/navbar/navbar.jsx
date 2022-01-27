@@ -13,7 +13,7 @@ function Navbar() {
         <div className={styles.contentBox}>매칭신청</div>
         <div className={styles.contentBox}>공지사항</div>
         <div className={styles.contentBox}>커뮤니티</div>
-        <div className={styles.contentBox}>MPEX</div>
+        <div className={styles.contentBox}>등록신청</div>
         <div className={styles.searchBarBox}>
           <input type="text" className={styles.searchBar} placeholder="" />
           <span className={styles.search__icon} placeholder="">
