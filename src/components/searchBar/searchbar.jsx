@@ -1,45 +1,47 @@
 import React from "react";
 import styles from "./searchbar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Searchbar() {
   return (
     <div className={styles.searchBox}>
       <h1 className={styles.searchBoxTitle}>
-        MPEX 에서 가치를 높이세요
+        매칭을 원하시는 날짜를 누르세요.
       </h1>
       <div class="search_wrapper">
-        <input className={styles.searchInput} type="text" placeholder="함께하고 싶은 운동을 입력해보세요." />
-        <button className={styles.buttonSubmit}>
-          <span>
-            <FontAwesomeIcon icon={faSearch} />
-          </span>
-        </button>
         <div className={styles.tagSection}>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">#농구</a>
+              <a href="https://naver.com">02/03(목)</a>
             </li>
           </ul>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">#축구</a>
+              <a href="https://naver.com">02/04(금)</a>
             </li>
           </ul>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">#야구</a>
+              <a href="https://naver.com">02/05(토)</a>
             </li>
           </ul>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">#배구</a>
+              <a href="https://naver.com">02/06(일)</a>
             </li>
           </ul>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">#골프</a>
+              <a href="https://naver.com">02/07(월)</a>
+            </li>
+          </ul>
+          <ul className={styles.tagSectionContainer}>
+            <li className={styles.tagSectionItem}>
+              <a href="https://naver.com">02/08(화)</a>
+            </li>
+          </ul>
+          <ul className={styles.tagSectionContainer}>
+            <li className={styles.tagSectionItem}>
+              <a href="https://naver.com">02/09(수)</a>
             </li>
           </ul>
         </div>
