@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./searchbar.module.css";
+import contentImg from "./sample.jpeg";
 
 function Searchbar() {
   return (
@@ -7,7 +8,7 @@ function Searchbar() {
       <h1 className={styles.searchBoxTitle}>
         매칭을 원하시는 날짜를 누르세요.
       </h1>
-      <div class="search_wrapper">
+      <div>
         <div className={styles.tagSection}>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
@@ -45,6 +46,9 @@ function Searchbar() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className={styles.matchigBox}>
+        <img src={contentImg} className={styles.contentImage} />
       </div>
     </div>
   )
