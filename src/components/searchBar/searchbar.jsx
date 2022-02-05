@@ -48,7 +48,7 @@ function Searchbar() {
         </div>
       </div>
       <div className={styles.matchigBox}>
-        <img src={contentImg} className={styles.contentImage} />
+        <img src={contentImg} className={styles.contentImage} alt=''/>
       </div>
     </div>
   )
