@@ -77,11 +77,21 @@
 .matchigBox {
   display: flex;
   width: 100%;
-  height: 120px;
-  border: 1px solid black;
+  height: 140px;
+  border: 1px solid #dee2e6;
 }
 
 .matchigBox img {
   width: 200px;
   height: 120px;
+  margin-top: 10px;
+  margin-right: 1px;
+  margin-bottom: 10px;
+}
+
+.matchingInfo {
+  width: 100%;
+  height: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

@@ -49,6 +49,14 @@ function Searchbar() {
       </div>
       <div className={styles.matchigBox}>
         <img src={contentImg} className={styles.contentImage} alt=''/>
+        <div className={styles.matchingInfo}>
+          <div>목포대학교</div>
+          <div>남여 모두 5:5일반</div>
+        </div>
+        <div className={styles.mattchingUI}>
+          <div>매칭신청</div>
+          <div>03/15</div>
+        </div>
       </div>
     </div>
   )
