@@ -117,7 +117,26 @@
   justify-content: center;
   align-items: center;
   width: 20%;
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.mattchingUI button {
+  width: 130px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7f7f7f;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.mattchingUI a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
 }
 
 .mattchingUI div {

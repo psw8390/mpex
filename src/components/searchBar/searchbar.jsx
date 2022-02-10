@@ -57,7 +57,9 @@ function Searchbar() {
           <div>농구 5:5 풀코트</div>
         </div>
         <div className={styles.mattchingUI}>
-          <div>매칭신청</div>
+          <button>
+            <a href="https://naver.com">매칭신청</a>
+          </button>
           <div>03/15명</div>
         </div>
       </div>
