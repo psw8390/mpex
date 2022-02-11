@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import HomeBanner from './components/homeBanner/homeBanner';
 import Navbar from './components/navbar/navbar';
-import Searchbar from './components/searchBar/searchbar';
+import Matchingbox from './components/matchingBox/matchingbox';
 import Footer from './components/footer/footer';
 
 
@@ -11,7 +11,7 @@ function App() {
     <div >
       <Navbar />
       <HomeBanner />
-      <Searchbar />
+      <Matchingbox />
       <Footer />
     </div>
   );
