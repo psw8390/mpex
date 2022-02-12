@@ -1,33 +1,46 @@
 import React from "react";
 import styles from "./navbar.module.css";
 import homeImg from "./home.jpeg";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 function Navbar() {
   return (
+<BrowserRouter>
   <div className={styles.Navbar}>
     <div className={styles.container}></div>
       <div className={styles.navbar_contents}>
-        <a href="/">
+        <Link to="/">
           <img className={styles.img} alt="home" src={homeImg} />
-        </a>
+        </Link>
         <div className={styles.contentBox}>
-          <a href="/apply">참가신청</a>
+          <Link to="/home">
+            참가신청
+          </Link>
         </div>
         <div className={styles.contentBox}>
-          <a href="/register">매칭등록</a>
+          <Link to="/register">
+            매칭등록
+          </Link>
         </div>
         <div className={styles.contentBox}>
-          <a href="/notice">공지사항</a>
+          <Link to="/notice">
+            공지사항
+          </Link>
         </div>
         <div className={styles.contentBox}>
-          <a href="/community">커뮤니티</a>
+          <Link to="community">
+            커뮤니티
+          </Link>
         </div>
         <div className={styles.loginBox}>
-          <button className={styles.loginbtn}>로그인</button>
+          <button className={styles.loginbtn}>
+            로그인
+          </button>
         </div>
       </div>
     <div className={styles.container}></div>
   </div>
+</BrowserRouter>
   )
 }
 
