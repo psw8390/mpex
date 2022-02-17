@@ -29,6 +29,10 @@
   justify-content: space-evenly;
 }
 
+.contentsBox {
+  text-decoration: none;
+}
+
 .contentBox {
   width: 100px;
   height: 60px;
@@ -38,10 +42,6 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
-}
-
-.contentBox a {
-  text-decoration: none;
   color: black;
 }
 

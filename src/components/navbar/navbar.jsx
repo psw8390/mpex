@@ -8,29 +8,34 @@ function Navbar() {
   <div className={styles.Navbar}>
     <div className={styles.container}></div>
       <div className={styles.navbar_contents}>
-        <Link to='/home'>
+        <Link to='/'>
           <img className={styles.img} alt="home" src={homeImg} />
         </Link>
-        <div className={styles.contentBox}>
-         
+
+        <Link to='/home' className={styles.contentsBox}>
+          <div className={styles.contentBox}>
             참가신청
-         
-        </div>
-        <div className={styles.contentBox}>
-        
+          </div>
+        </Link>
+
+        <Link to='/register' className={styles.contentsBox}>
+          <div className={styles.contentBox}>
             매칭등록
-       
-        </div>
-        <div className={styles.contentBox}>
-          
+          </div>
+        </Link>
+
+        <Link to='/notice' className={styles.contentsBox}>
+          <div className={styles.contentBox}>
             공지사항
-      
-        </div>
-        <div className={styles.contentBox}>
-         
+          </div>
+        </Link>
+
+        <Link to='/community' className={styles.contentsBox}>
+          <div className={styles.contentBox}>
             커뮤니티
-        
-        </div>
+          </div>
+        </Link>
+
         <div className={styles.loginBox}>
           <button className={styles.loginbtn}>
             로그인
