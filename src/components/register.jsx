@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
 import HomeBanner from './homeBanner/homeBanner';
-import Matchingbox from './matchingBox/matchingbox';
+import RegInput from './regInput/regInput';
 import Footer from './footer/footer';
 
 class Register extends React.Component {
@@ -9,6 +9,8 @@ class Register extends React.Component {
     return(
       <div >
         <Navbar />
+        <HomeBanner />
+        <RegInput />
         <Footer />
     </div>
     )
