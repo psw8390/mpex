@@ -9,7 +9,6 @@ class Register extends React.Component {
     return(
       <div >
         <Navbar />
-        <HomeBanner />
         <RegInput />
         <Footer />
     </div>
