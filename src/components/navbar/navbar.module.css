@@ -9,6 +9,7 @@
   top: 0;
   display: flex;
   justify-content: space-between;
+  border: 1px solid black;
 }
 
 .container {
