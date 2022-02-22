@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./matchingbox.module.css";
 
-function Searchbar() {
+function Matchingbox() {
   return (
     <div className={styles.searchBox}>
       <h1 className={styles.searchBoxTitle}>
@@ -67,4 +67,4 @@ function Searchbar() {
   )
 }
 
-export default Searchbar;
+export default Matchingbox;

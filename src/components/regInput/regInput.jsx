@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "./regInput.module.css";
+import stadiumImg from "./stadiumImg.jpeg"
+import Matchingbox from '../matchingBox/matchingbox';
 
 function Navbar() {
   return (
     <div className={styles.regBox}>
-      라면
+        <img className={styles.stadiumImg} alt="stadimImg" src={stadiumImg} />
+        <div className={styles.stadimgInfo}>
+          <Matchingbox></Matchingbox>
+        </div>
     </div>
   )
 }
