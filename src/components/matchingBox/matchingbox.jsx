@@ -7,7 +7,14 @@ function Matchingbox() {
       <h1 className={styles.searchBoxTitle}>
         매칭을 원하시는 날짜를 누르세요.
       </h1>
-      <div>
+      <div className={styles.matchingUiBox}>
+        <div className={styles.matchingRegisterBox}>
+          <ul className={styles.tagSectionContainer}>
+            <li className={styles.tagSectionItem}>
+              <a href="https://naver.com">매칭 등록</a>
+            </li>
+          </ul>
+        </div>
         <div className={styles.tagSection}>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
