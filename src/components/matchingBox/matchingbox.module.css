@@ -29,12 +29,12 @@
 
 .matchingUiBox {
   display: flex;
+  color: red;
 }
 
 .matchingRegisterBox {
   display: flex;
   padding-top: 19px;
-  padding-right: 50px;
 }
 
 .searchInput {
@@ -118,6 +118,10 @@
 
 .matchingInfo div {
   margin-top: 10px;
+}
+
+.significant {
+  font-size: 15px;
 }
 
 .mattchingUI {

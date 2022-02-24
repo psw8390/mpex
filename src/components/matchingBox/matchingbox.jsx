@@ -62,6 +62,7 @@ function Matchingbox() {
         <div className={styles.matchingInfo}>
           <div>목포대학교 부설 체육관</div>
           <div>농구 5:5 풀코트</div>
+          <div className={styles.significant}>특이사항 : </div>
         </div>
         <div className={styles.mattchingUI}>
           <button>
