@@ -90,6 +90,11 @@
   border: 1px solid #dee2e6;
 }
 
+.gymImg {
+  width: 200px;
+  height: 140px;
+}
+
 .matchigBoxTime {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./matchingbox.module.css";
+import gymImg from "./gymImg.jpeg";
+
 
 function Matchingbox() {
   return (
@@ -59,6 +61,7 @@ function Matchingbox() {
           <div>~</div>
           <div>15:00</div>
         </div>
+        <img className={styles.gymImg} alt="homeBaneer" src={gymImg} />
         <div className={styles.matchingInfo}>
           <div>목포대학교 부설 체육관</div>
           <div>농구 5:5 풀코트</div>
