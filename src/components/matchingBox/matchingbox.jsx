@@ -69,9 +69,9 @@ function Matchingbox() {
         </div>
         <div className={styles.mattchingUI}>
           <button>
-            <a href="https://naver.com">매칭신청</a>
+            <a href="https://naver.com">매칭등록</a>
           </button>
-          <div>03/15명</div>
+          <input placeholder='최대인원'></input>
         </div>
       </form>
 
