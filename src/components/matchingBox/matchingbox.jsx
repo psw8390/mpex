@@ -57,8 +57,8 @@ function Matchingbox() {
           </ul>
         </div>
       </div>
-      <MatchingRegister></MatchingRegister>
 
+      <MatchingRegister></MatchingRegister>
 
       <div className={styles.matchigBox}>
         <div className={styles.matchigBoxTime}>
