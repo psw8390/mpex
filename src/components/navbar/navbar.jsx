@@ -18,7 +18,7 @@ function Navbar() {
           </div>
         </Link>
 
-        <Link to='/register' className={styles.contentsBox}>
+        <Link to='/home' className={styles.contentsBox}>
           <div className={styles.contentBox}>
             매칭등록
           </div>

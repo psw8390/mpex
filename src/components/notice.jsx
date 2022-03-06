@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
 import HomeBanner from './homeBanner/homeBanner';
-import Matchingbox from './matchingBox/matchingbox';
 import Footer from './footer/footer';
 
 class Notice extends React.Component {
@@ -10,6 +9,7 @@ class Notice extends React.Component {
       <div >
         <Navbar />
         <HomeBanner />
+        업데이트중...
         <Footer />
     </div>
     )

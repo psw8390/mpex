@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
 import HomeBanner from './homeBanner/homeBanner';
-import Matchingbox from './matchingBox/matchingbox';
 import Footer from './footer/footer';
 
 class Comminity extends React.Component {
@@ -9,6 +8,8 @@ class Comminity extends React.Component {
     return(
       <div >
         <Navbar />
+        <HomeBanner />
+        업데이트중...
         <Footer />
     </div>
     )
