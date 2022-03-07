@@ -2,15 +2,20 @@ import React from "react";
 import styles from "./matchingbox.module.css";
 import gymImg from "./gymImg.jpeg";
 import MatchingRegister from "../matchingRegister/matchingRegister";
+import Clock from "../clock/clock";
 
 
 
 function Matchingbox() {
+  
   return (
     <div className={styles.searchBox}>
       <h1 className={styles.searchBoxTitle}>
         매칭을 원하시는 날짜를 누르세요.
       </h1>
+
+      <Clock> </Clock>
+
       <div className={styles.matchingUiBox}>
         <div className={styles.matchingRegisterBox}>
           <ul className={styles.tagSectionContainer}>
