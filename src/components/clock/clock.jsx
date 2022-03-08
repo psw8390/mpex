@@ -1,14 +1,22 @@
-import React from "react";
-import styles from "./clock.module.css";
+import {useState, useEffect } from 'react';
+import React, { Component }  from 'react';
 
-function Tick() {
-  const element = (
+function Clock() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return (() => clearInterval(id))
+  }, []);
+  
+  return (
     <div>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      <h1>현재시간</h1>
+      <span>{time.toLocaleTimeString()}</span>
     </div>
-  );
+  )
 }
 
-setInterval(tick, 1000);
-
-export default Tick;
+export default Clock;
