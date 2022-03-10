@@ -1,5 +1,5 @@
 import {useState, useEffect } from 'react';
-import React, { Component }  from 'react';
+import React from "react";
 
 function Clock() {
   const [time, setTime] = useState(new Date());
@@ -13,8 +13,9 @@ function Clock() {
   
   return (
     <div>
-      <h1>현재시간</h1>
-      <span>{time.toLocaleTimeString()}</span>
+      <span>
+        {time.toLocaleString()}
+      </span>
     </div>
   )
 }

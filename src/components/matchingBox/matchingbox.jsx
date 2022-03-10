@@ -4,10 +4,7 @@ import gymImg from "./gymImg.jpeg";
 import MatchingRegister from "../matchingRegister/matchingRegister";
 import Clock from "../clock/clock";
 
-
-
-function Matchingbox() {
-  
+function Matchingbox(props) {
   return (
     <div className={styles.searchBox}>
       <h1 className={styles.searchBoxTitle}>
@@ -27,7 +24,9 @@ function Matchingbox() {
         <div className={styles.tagSection}>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">02/03(목)</a>
+              <a href="https://naver.com">
+                02/04(금)
+              </a>
             </li>
           </ul>
           <ul className={styles.tagSectionContainer}>
