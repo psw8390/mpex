@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./matchingbox.module.css";
 import gymImg from "./gymImg.jpeg";
 import MatchingRegister from "../matchingRegister/matchingRegister";
-import Clock from "../clock/clock";
+import Calendar from '../calendar.jsx/calendar';
 
-function Matchingbox(props) {
+function Matchingbox() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const id = setInterval(
+      () => {
+      setTime(new Date());
+    }, 1000);
+    
+    return (() => clearInterval(id))}, []);
+
   return (
     <div className={styles.searchBox}>
       <h1 className={styles.searchBoxTitle}>
         매칭을 원하시는 날짜를 누르세요.
       </h1>
 
-      <Clock> </Clock>
+      {time.toLocaleString()}
 
       <div className={styles.matchingUiBox}>
         <div className={styles.matchingRegisterBox}>
@@ -24,14 +34,20 @@ function Matchingbox(props) {
         <div className={styles.tagSection}>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">
-                02/04(금)
-              </a>
+              {
+                time.toLocaleDateString(
+                  'ko-kr', {
+                    month : '2-digit',
+                    day : '2-digit',
+                    weekday: 'short'
+                  }
+                )
+              }
             </li>
           </ul>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">02/04(금)</a>
+              <Calendar />
             </li>
           </ul>
           <ul className={styles.tagSectionContainer}>
