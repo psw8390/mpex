@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./matchingbox.module.css";
 import gymImg from "./gymImg.jpeg";
 import MatchingRegister from "../matchingRegister/matchingRegister";
-import Calendar from '../calendar.jsx/calendar';
+import Calendar from '../calendar/calendar'
 
 function Matchingbox() {
   const [time, setTime] = useState(new Date());
@@ -31,50 +31,10 @@ function Matchingbox() {
             </li>
           </ul>
         </div>
-        <div className={styles.tagSection}>
-          <ul className={styles.tagSectionContainer}>
-            <li className={styles.tagSectionItem}>
-              {
-                time.toLocaleDateString(
-                  'ko-kr', {
-                    month : '2-digit',
-                    day : '2-digit',
-                    weekday: 'short'
-                  }
-                )
-              }
-            </li>
-          </ul>
-          <ul className={styles.tagSectionContainer}>
-            <li className={styles.tagSectionItem}>
-              <Calendar />
-            </li>
-          </ul>
-          <ul className={styles.tagSectionContainer}>
-            <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">02/05(토)</a>
-            </li>
-          </ul>
-          <ul className={styles.tagSectionContainer}>
-            <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">02/06(일)</a>
-            </li>
-          </ul>
-          <ul className={styles.tagSectionContainer}>
-            <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">02/07(월)</a>
-            </li>
-          </ul>
-          <ul className={styles.tagSectionContainer}>
-            <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">02/08(화)</a>
-            </li>
-          </ul>
-          <ul className={styles.tagSectionContainer}>
-            <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">02/09(수)</a>
-            </li>
-          </ul>
+        <div className={styles.matchingUiBox}>
+          <div className={styles.matchingRegisterBox}>
+            <Calendar />
+          </div>
         </div>
       </div>
 
