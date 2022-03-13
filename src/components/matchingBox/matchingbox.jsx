@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./matchingbox.module.css";
 import gymImg from "./gymImg.jpeg";
 import MatchingRegister from "../matchingRegister/matchingRegister";
-import Calendar from '../calendar/calendar'
+import DatePick from '../datepicker/datepicker';
 
 function Matchingbox() {
   const [time, setTime] = useState(new Date());
@@ -33,7 +33,11 @@ function Matchingbox() {
         </div>
         <div className={styles.matchingUiBox}>
           <div className={styles.matchingRegisterBox}>
-            <Calendar />
+            <ul className={styles.tagSectionContainer}>
+              <li className={styles.tagSectionItem}>
+                <DatePick />
+              </li>
+          </ul>
           </div>
         </div>
       </div>
