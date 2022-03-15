@@ -24,6 +24,9 @@ function MatchingRegister() {
           <button>
             <a href="https://naver.com">매칭등록</a>
           </button>
+          <button>
+            <a href="https://naver.com">취소</a>
+          </button>
           <input placeholder='최대인원:'></input>
         </div>
       </form>
