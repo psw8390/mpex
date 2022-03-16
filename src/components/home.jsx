@@ -7,12 +7,13 @@ import Footer from './footer/footer';
 class Home extends React.Component {
   render() {
     return(
-      <div >
+      <section>
         <Navbar />
         <HomeBanner />
         <Matchingbox />
         <Footer />
-    </div>
+
+      </section>
     )
   }
 }

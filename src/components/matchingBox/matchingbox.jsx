@@ -48,7 +48,7 @@ function Matchingbox() {
       {visible && <MatchingRegister />}
       {}
 
-      <div className={styles.matchigBox}>
+      <div className={styles.matchingBox}>
         <div className={styles.matchigBoxTime}>
           <div>11:00</div>
           <div>~</div>
@@ -67,7 +67,7 @@ function Matchingbox() {
           <div>03/15명</div>
         </div>
       </div>
-      <div className={styles.matchigBox}>
+      <div className={styles.matchingBox}>
         <div className={styles.matchigBoxTime}>
           <div>11:00</div>
           <div>~</div>
@@ -86,6 +86,26 @@ function Matchingbox() {
           <div>03/15명</div>
         </div>
       </div>
+      <div className={styles.matchingBox}>
+        <div className={styles.matchigBoxTime}>
+          <div>11:00</div>
+          <div>~</div>
+          <div>15:00</div>
+        </div>
+        <img className={styles.gymImg} alt="homeBaneer" src={gymImg} />
+        <div className={styles.matchingInfo}>
+          <div>목포대학교 부설 체육관</div>
+          <div>농구 5:5 풀코트</div>
+          <div className={styles.significant}>특이사항 : </div>
+        </div>
+        <div className={styles.mattchingUI}>
+          <button>
+            <a href="https://naver.com">매칭신청</a>
+          </button>
+          <div>03/15명</div>
+        </div>
+      </div>
+      
     </div>
   )
 }

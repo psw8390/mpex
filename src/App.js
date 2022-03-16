@@ -13,7 +13,6 @@ function App() {
         <Route exact path='/home' element={<Home />} />
         <Route exact path='/notice' element={<Notice />} />
         <Route exact path='/community' element={<Community />} />
-
       </Routes>
     </BrowserRouter>
   );
