@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./matchingRegister.module.css";
 
 function MatchingRegister() {
+
   return(
       <form className={styles.matchigBox}>
         <div className={styles.matchigBoxTime}>

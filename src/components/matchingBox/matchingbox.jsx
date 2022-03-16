@@ -15,6 +15,9 @@ function Matchingbox() {
     
     return (() => clearInterval(id))}, []);
 
+  const [visible, setVisible] = useState(false);
+
+    
   return (
     <div className={styles.searchBox}>
       <h1 className={styles.searchBoxTitle}>
@@ -27,7 +30,7 @@ function Matchingbox() {
         <div className={styles.matchingRegisterBox}>
           <ul className={styles.tagSectionContainer}>
             <li className={styles.tagSectionItem}>
-              <a href="https://naver.com">매칭 등록</a>
+              <button onClick={() => {setVisible(!visible);}}>{visible ? "취소" : "매칭등록"}</button>
             </li>
           </ul>
         </div>
@@ -42,7 +45,8 @@ function Matchingbox() {
         </div>
       </div>
 
-      <MatchingRegister></MatchingRegister>
+      {visible && <MatchingRegister />}
+      {}
 
       <div className={styles.matchigBox}>
         <div className={styles.matchigBoxTime}>
