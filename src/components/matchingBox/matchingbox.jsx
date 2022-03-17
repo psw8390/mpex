@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import styles from "./matchingbox.module.css";
 import gymImg from "./gymImg.jpeg";
 import MatchingRegister from "../matchingRegister/matchingRegister";
@@ -16,7 +16,6 @@ function Matchingbox() {
     return (() => clearInterval(id))}, []);
 
   const [visible, setVisible] = useState(false);
-
     
   return (
     <div className={styles.searchBox}>

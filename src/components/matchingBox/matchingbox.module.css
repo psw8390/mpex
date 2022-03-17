@@ -1,6 +1,8 @@
+@value makerWhite from '../../common/colors.css';
+
 .searchBox {
   display: flex;
-  background-color: white;
+  background-color: makerWhite;
   width: 100%;
   flex-direction: column;
   align-items: center;
