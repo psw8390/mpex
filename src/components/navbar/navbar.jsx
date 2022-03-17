@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import styles from "./navbar.module.css";
 import homeImg from "./home.jpeg";
 import { Link } from "react-router-dom";
