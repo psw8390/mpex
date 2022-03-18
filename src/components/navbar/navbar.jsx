@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from "./navbar.module.css";
 import homeImg from "./home.jpeg";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({authService}) {
+  const navigate = useNavigate()
+  const onLogout = () => {
+    authService.logout()
+  }
+
+  useEffect(() => {
+    authService.onAuthChange(user => {
+      if(!user) {
+        navigate('/');
+      }
+    })
+  })
+
   return (
   <div className={styles.Navbar}>
     <div className={styles.container}></div>
@@ -37,8 +51,8 @@ function Navbar() {
         </Link>
 
         <div className={styles.loginBox}>
-          <button className={styles.loginbtn}>
-            로그인
+          <button className={styles.loginbtn} onClick={onLogout} >
+            로그아웃
           </button>
         </div>
       </div>

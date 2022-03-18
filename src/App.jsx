@@ -11,7 +11,7 @@ function App({authService}) {
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<Login authService={authService} />} />
-        <Route exact path='/home' element={<Home />} />
+        <Route exact path='/home' element={<Home authService={authService} />} />
         <Route exact path='/notice' element={<Notice />} />
         <Route exact path='/community' element={<Community />} />
       </Routes>

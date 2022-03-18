@@ -4,18 +4,16 @@ import HomeBanner from './homeBanner/homeBanner';
 import Matchingbox from './matchingBox/matchingbox';
 import Footer from './footer/footer';
 
-class Home extends React.Component {
-  render() {
-    return(
-      <section>
-        <Navbar />
-        <HomeBanner />
-        <Matchingbox />
-        <Footer />
+const Home = ({authService}) => {
+  return(
+    <section>
+      <Navbar authService={authService}/>
+      <HomeBanner />
+      <Matchingbox />
+      <Footer />
 
-      </section>
-    )
-  }
-}
+    </section>
+  )   
+};
 
-export default Home
+export default Home;
