@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import './index.module.css';
 import AuthService from './service/auth_service';
 import { firebaseApp } from './service/firebase';
 

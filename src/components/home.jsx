@@ -11,7 +11,6 @@ const Home = ({authService}) => {
       <HomeBanner />
       <Matchingbox />
       <Footer />
-
     </section>
   )   
 };

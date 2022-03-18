@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Home from './components/home';
 import Notice from './components/notice';
@@ -8,6 +8,7 @@ import Login from './components/login/login';
 
 function App({authService}) {
   return (
+    <div className={styles.app}>
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<Login authService={authService} />} />
@@ -16,6 +17,7 @@ function App({authService}) {
         <Route exact path='/community' element={<Community />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 

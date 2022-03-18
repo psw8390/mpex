@@ -1,20 +1,12 @@
-.Navbar {
+.navbar {
+  width: 100%;
   background: white;
   color: black;
-  width: 100vw;
   height: 60px;
-  z-index: 1;
-  min-height: unset;
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border: 1px solid black;
-}
-
-.container {
-  width: 10%;
-  background-color: white;
+  position: absolute;
+  top: 0;
 }
 
 .img {
@@ -27,7 +19,7 @@
   width: 80%;
   background-color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .contentsBox {

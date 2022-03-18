@@ -6,7 +6,7 @@ import { faAngleLeft, faAngleRight, faPause } from "@fortawesome/free-solid-svg-
 
 function HomeBanner() {
   return (
-    <div className={styles.homeBannerBox}>
+    <section className={styles.homeBannerBox}>
         <img className={styles.homeBannerImg} alt="homeBaneer" src={homeBannerImg} />
         <div className={styles.paginationContainer}>
           <div className={styles.paginationController}>
@@ -24,8 +24,6 @@ function HomeBanner() {
             </div>
           </div>
 
-          <div className={styles.divider}>
-          </div>
 
           <div className={styles.swiperPaginationWrapper}>
             <div className={styles.swiperPaginationBullet}>
@@ -33,8 +31,6 @@ function HomeBanner() {
             </div>
           </div>
 
-          <div className={styles.divider}>
-          </div>
 
           <div className={styles.paginationController}>
             <div className={styles.pageNumber} >
@@ -51,7 +47,7 @@ function HomeBanner() {
             </div>
           </div>
         </div>
-    </div>
+    </section>
   )
 }
 
