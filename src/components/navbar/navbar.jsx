@@ -49,11 +49,9 @@ function Navbar({authService}) {
           </div>
         </Link>
 
-        <div className={styles.loginBox}>
-          <button className={styles.loginbtn} onClick={onLogout} >
+          <button className={styles.logoutBtn} onClick={onLogout} >
             로그아웃
           </button>
-        </div>
       </div>
   </nav>
   )

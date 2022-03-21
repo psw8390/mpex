@@ -5,9 +5,8 @@
 }
 
 .homeBannerImg {
-  display: inline-block;
   width: 100%;
-  height: 10%;
+  height: 70%;
 }
 
 .paginationContainer {

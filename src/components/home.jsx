@@ -6,12 +6,12 @@ import Footer from './footer/footer';
 
 const Home = ({authService}) => {
   return(
-    <section>
+    <>
       <Navbar authService={authService}/>
       <HomeBanner />
       <Matchingbox />
       <Footer />
-    </section>
+    </>
   )   
 };
 
