@@ -9,7 +9,7 @@ import Login from './components/login/login';
 function App({authService}) {
   return (
     <div className={styles.app}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path='/' element={<Login authService={authService} />} />
         <Route exact path='/home' element={<Home authService={authService} />} />
