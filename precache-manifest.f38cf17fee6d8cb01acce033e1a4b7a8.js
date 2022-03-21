@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/mpex/static/media/gymImg.2145e62b.jpeg"
   },
   {
-    "revision": "4807fb710192c9d084097e51ba99cd39",
+    "revision": "48ee6849b6596e2acd383d2fbd81d3af",
     "url": "/mpex/index.html"
   }
 ];
