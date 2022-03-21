@@ -1,7 +1,6 @@
 @value makerGrey from  './common/colors.css';
 
 .app {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

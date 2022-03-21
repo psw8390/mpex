@@ -1,12 +1,16 @@
 @value makerGreen, makerLightPink, makerWhite from '../../common/colors.css';
 
 .login {
-  width: 40em;
+  width: 50%;
+  height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: makerWhite;
+}
+
+.loginSection {
+  background-color: white;
 }
 
 .login section h1 {
@@ -22,6 +26,7 @@
   flex-direction: column;
   list-style: none;
   padding: 0.5rem;
+  background-color: white;
 }
 
 .item {
