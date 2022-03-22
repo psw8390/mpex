@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styles from "./matchingbox.module.css";
-import MatchingRegister from "../matchingRegister/matchingRegister";
+import styles from "./matching_title.module.css";
 import Calendar from '../datepicker/datepicker';
-import Matching from '../matching/matching';
 
-function Matchingbox() {
+function MatchingTitle() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -15,8 +13,6 @@ function Matchingbox() {
     
     return (() => clearInterval(id))}, []);
 
-  const [visible, setVisible] = useState(false);
-    
   return (
     <section className={styles.matchingSection}>
       <h1 className={styles.matchingSectionTitle}>
@@ -30,29 +26,13 @@ function Matchingbox() {
         <div className={styles.matchingRegisterBox}>
           <div className={styles.tagSectionContainer}>
             <div className={styles.tagSectionItem}>
-              <button onClick={() => {setVisible(!visible);}}>{visible ? "취소" : "매칭등록"}</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.matchingRegisterBox}>
-          <div className={styles.tagSectionContainer}>
-            <div className={styles.tagSectionItem}>
               <Calendar />
             </div>
           </div>
         </div>
-        
-
       </div>
-
-      {visible && <MatchingRegister />}
-      {}
-
-      <Matching />
-      
     </section>
   )
 }
 
-export default Matchingbox;
+export default MatchingTitle;
