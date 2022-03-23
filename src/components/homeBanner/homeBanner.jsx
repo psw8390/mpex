@@ -30,22 +30,6 @@ function HomeBanner() {
               MPEX & NSB
             </div>
           </div>
-
-
-          <div className={styles.paginationController}>
-            <div className={styles.pageNumber} >
-                <div className={styles.numberBox}>
-                  <span>1</span>
-                  <span>/</span>
-                  <span>9</span>
-                </div>
-                <div className={styles.pageNumberController}>
-                  <FontAwesomeIcon icon={faAngleLeft} className="faAngleLeft" />
-                  <FontAwesomeIcon icon={faPause} className="faPause" />
-                  <FontAwesomeIcon icon={faAngleRight} className="faAngleRight" />
-                </div>
-            </div>
-          </div>
         </div>
     </section>
   )

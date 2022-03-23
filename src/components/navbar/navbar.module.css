@@ -4,6 +4,7 @@
   color: black;
   height: 60px;
   justify-content: center;
+  border: 1px solid #dee2e6;
 }
 
 .img {

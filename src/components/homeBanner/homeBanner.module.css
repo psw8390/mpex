@@ -1,15 +1,19 @@
 .homeBannerBox {
-  width: 100%;
+  width: 50%;
+  height: 58vh;
   display: flex;
   flex-direction: column;
+  border: 1px solid #dee2e6;
+  overflow-y: scroll;
 }
 
 .homeBannerImg {
   width: 100%;
+  height: 90%;
 }
 
 .paginationContainer {
-  height: 60px;
+  height: 15%;
   display: flex;
 }
 
