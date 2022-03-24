@@ -34,11 +34,11 @@ class PopupMain extends Component {
                             id="popupDom"
                             onClick={this.openPopup}
                     >
-                        매칭등록
+                        매칭 등록
                     </button>
                     {this.state.isOpenPopup &&
                         <PopupDom>
-                            <PopupContent onClose={this.closePopup}/>
+                            <PopupContent  onClose={this.closePopup} />
                         </PopupDom>
                     }
                 </div>

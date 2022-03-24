@@ -14,7 +14,7 @@ class PopupContent extends Component {
         </div>
         <div>
           <button type="button" onClick={this.props.onClose}>취소</button>
-          <button type="submit">등록하기</button>
+          <button type="submit" onClick={this.props.onClose}>등록하기</button>
         </div>
       </div>
     </div>

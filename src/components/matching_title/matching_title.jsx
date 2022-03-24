@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "./matching_title.module.css";
-import Calendar from '../datepicker/datepicker';
-import PopupMain from '../popupMain/popupMain';
 
 function MatchingTitle() {
   const [time, setTime] = useState(new Date());
@@ -23,18 +21,6 @@ function MatchingTitle() {
         {time.toLocaleString()}
       </div>
 
-      <div className={styles.matchingUiBox}>
-        <div className={styles.matchingRegisterBox}>
-          <div className={styles.tagSectionContainer}>
-              <PopupMain />
-          </div>
-          <div className={styles.tagSectionContainer}>
-            <div className={styles.tagSectionItem}>
-              <Calendar />
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }

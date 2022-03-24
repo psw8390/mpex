@@ -1,75 +1,68 @@
-import React from 'react';
+import React, { useState } from "react";
 import styles from './matching_preview.module.css';
-import gymImg from "./gymImg.jpeg";
+import PopupMain from '../popupMain/popupMain';
+import Calendar from '../datepicker/datepicker';
+import Matching from '../matching/matching';
+import MatchingEditForm from '../matching_edit_form/matching_edit_form';
 
 
 const MatchingPreview = () => {
-  return (
-    <div className={styles.matchingPreviewBox}>
-    <div className={styles.matchingBox}>
-      <img className={styles.gymImg} alt="homeBaneer" src={gymImg} />
-      <div className={styles.matchingInfo}>
-        <div>시간 : 09:00~10:00</div>
-        <div>장소명 : 목포대학교 부설 체육관(목포시 상동 1234)</div>
-        <div>진행방식 : 5:5 풀코트</div>
-        <div>문의 : 010-0000-0000</div>
-        <div>특이사항 : 게스트비 5천원</div>
-    </div>
+  const [matchings, setMatchings] = useState([
+    {
+      id: '1',
+      time: '09:00~10:00',
+      process: '5:5 풀코트',
+      phone: '010-0000-0000',
+      significant: '게스트비:5000원',
+      maxpeople: '15명',
+      fileName: 'gym123',
+      fileURL: 'gymimg'
+    },
+    {
+      id: '2',
+      time: '10:00~11:00',
+      process: '5:5 풀코트',
+      phone: '010-0000-0000',
+      significant: '게스트비:5000원',
+      maxpeople: '15명',
+      fileName: 'gym123',
+      fileURL: null
+    },
+    {
+      id: '3',
+      time: '11:00~12:00',
+      process: '5:5 풀코트',
+      phone: '010-0000-0000',
+      significant: '게스트비:5000원',
+      maxpeople: '15명',
+      fileName: 'gym123',
+      fileURL: null
+    }
+  ])
 
-    <div className={styles.mattchingUI}>
-      <button>
-        삭제하기
-      </button>
+  return (
+<div className={styles.matchingPreviewBox}>
+  {/* 매칭등록,캘린더 */}
+  <div className={styles.matchingUiBox}>
+    <div className={styles.matchingRegisterBox}>
+      <div className={styles.tagSectionContainer}>
+          <PopupMain matchings={matchings} />
+      </div>
+      <div className={styles.tagSectionContainer}>
+        <div className={styles.tagSectionItem}>
+          <Calendar />
+        </div>
+      </div>
     </div>
   </div>
-  <div className={styles.matchingBox}>
-  <img className={styles.gymImg} alt="homeBaneer" src={gymImg} />
-  <div className={styles.matchingInfo}>
-    <div>시간 : 09:00~10:00</div>
-    <div>장소명 : 목포대학교 부설 체육관(목포시 상동 1234)</div>
-    <div>진행방식 : 5:5 풀코트</div>
-    <div>문의 : 010-0000-0000</div>
-    <div>특이사항 : 게스트비 5천원</div>
-</div>
+  
+  <ul>
+    {
+      matchings.map(matching => (
+        <Matching matching={matching} />
+      ))}
+  </ul>
 
-<div className={styles.mattchingUI}>
-  <button>
-    삭제하기
-  </button>
-</div>
-</div>
-<div className={styles.matchingBox}>
-  <img className={styles.gymImg} alt="homeBaneer" src={gymImg} />
-  <div className={styles.matchingInfo}>
-    <div>시간 : 09:00~10:00</div>
-    <div>장소명 : 목포대학교 부설 체육관(목포시 상동 1234)</div>
-    <div>진행방식 : 5:5 풀코트</div>
-    <div>문의 : 010-0000-0000</div>
-    <div>특이사항 : 게스트비 5천원</div>
-</div>
-
-<div className={styles.mattchingUI}>
-  <button>
-    삭제하기
-  </button>
-</div>
-</div>
-<div className={styles.matchingBox}>
-  <img className={styles.gymImg} alt="homeBaneer" src={gymImg} />
-  <div className={styles.matchingInfo}>
-    <div>시간 : 09:00~10:00</div>
-    <div>장소명 : 목포대학교 부설 체육관(목포시 상동 1234)</div>
-    <div>진행방식 : 5:5 풀코트</div>
-    <div>문의 : 010-0000-0000</div>
-    <div>특이사항 : 게스트비 5천원</div>
-</div>
-
-<div className={styles.mattchingUI}>
-  <button>
-    삭제하기
-  </button>
-</div>
-</div>
 </div>
   )
 }

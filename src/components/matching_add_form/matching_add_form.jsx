@@ -12,7 +12,7 @@ function MatchingAddForm() {
         </div>
 
         <div className={styles.matchingInfo}>
-          <input placeholder='시간:'></input>
+          <input placeholder='시간:' ></input>
           <input placeholder='장소명:'></input>
           <input placeholder='진행방식:'></input>
           <input placeholder='문의:'></input>
