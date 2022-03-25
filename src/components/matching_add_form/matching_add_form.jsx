@@ -1,7 +1,9 @@
 import React from "react";
 import styles from './matching_add_form.module.css';
 
-function MatchingAddForm() {
+
+function MatchingAddForm(props) {
+  const {setTime, time} = props
 
   return(
     <div className={styles.matchingAddFormBox}>
@@ -12,7 +14,7 @@ function MatchingAddForm() {
         </div>
 
         <div className={styles.matchingInfo}>
-          <input placeholder='시간:' ></input>
+          <input placeholder='시간:' value={time} onChange={(e) => setTime(e.target.value)}></input>
           <input placeholder='장소명:'></input>
           <input placeholder='진행방식:'></input>
           <input placeholder='문의:'></input>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from "./navbar.module.css";
 import homeImg from "./home.jpeg";
@@ -10,9 +10,15 @@ function Navbar({authService}) {
     authService.logout()
   }
 
+  const navigateState = useNavigate().state;
+  const [userId, setUserId] = useState(navigateState && navigateState.id);
+
+
   useEffect(() => {
     authService.onAuthChange(user => {
-      if(!user) {
+      if(user) {
+        setUserId(user.uid);
+      } else {
         navigate('/');
       }
     })

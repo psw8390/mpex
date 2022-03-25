@@ -3,11 +3,11 @@ import HomeBanner from '../homeBanner/homeBanner';
 import MatchingPreview from '../matching_preview/matching_preview';
 import styles from "./matching_body.module.css";
 
-function MatchingBody() {
+function MatchingBody({matchingRepository, addData }) {
   return(   
     <div className={styles.body}>
         <HomeBanner />
-        <MatchingPreview />
+        <MatchingPreview matchingRepository = {matchingRepository} addData={addData}/>
     </div>
   )
 }

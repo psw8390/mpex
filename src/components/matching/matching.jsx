@@ -1,13 +1,18 @@
 import React from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MatchingEditForm from '../matching_edit_form/matching_edit_form';
 import gymImg from "./gymImg.jpeg";
 import styles from './matching.module.css';
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
-const Matching = ({ matching }) => {
+const Matching = ({ matching, matchingRepository, addData }) => {
   const {time, process, phone, significant,maxpeople,fileName,fileURL} = matching;
   const url = fileURL || DEFAULT_IMAGE;
+
+  const navigateState = useNavigate().state;
+  const [userId, setUesrId] = useState(navigateState && navigateState.id);
 return(
   <>
     <li className={styles.matchingBox}>
@@ -22,7 +27,7 @@ return(
 
     <div className={styles.matchingUI}>
       <button className={styles.deleteUI}>
-        <MatchingEditForm matching={matching} />
+        <MatchingEditForm matching={matching} matchingRepository={matchingRepository} addData={addData}/>,
       </button>
     </div>
     </li>

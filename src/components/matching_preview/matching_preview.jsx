@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import styles from './matching_preview.module.css';
 import PopupMain from '../popupMain/popupMain';
 import Calendar from '../datepicker/datepicker';
 import Matching from '../matching/matching';
 import MatchingEditForm from '../matching_edit_form/matching_edit_form';
+import { createDependency } from 'webpack/lib/SingleEntryPlugin';
 
 
-const MatchingPreview = () => {
+const MatchingPreview = ({matchingRepository, addData}) => {
   const [matchings, setMatchings] = useState([
     {
       id: '1',
@@ -40,13 +42,26 @@ const MatchingPreview = () => {
     }
   ])
 
+  const navigateState = useNavigate().state;
+  const [userId, setUserId] = useState(navigateState && navigateState.id);
+
+  const createOrUpdateMatching = matching => {
+    setMatchings(matchings => {
+      const updated = { ...matchings };
+      updated[ matching.id] = matching;
+      return updated;
+    });
+  matchingRepository.saveMatching(userId, matching);
+  }
+
   return (
 <div className={styles.matchingPreviewBox}>
   {/* 매칭등록,캘린더 */}
   <div className={styles.matchingUiBox}>
     <div className={styles.matchingRegisterBox}>
       <div className={styles.tagSectionContainer}>
-          <PopupMain matchings={matchings} />
+          <PopupMain matchings={matchings} matchingRepository={matchingRepository}
+          addData={addData} />
       </div>
       <div className={styles.tagSectionContainer}>
         <div className={styles.tagSectionItem}>
@@ -59,12 +74,13 @@ const MatchingPreview = () => {
   <ul>
     {
       matchings.map(matching => (
-        <Matching matching={matching} />
+        <Matching matching={matching} matchingRepository={matchingRepository} addData={addData}/>
       ))}
   </ul>
 
 </div>
   )
 }
+
 
 export default MatchingPreview;

@@ -1,11 +1,10 @@
 import React from 'react';
 import PopupMain from '../popupMain/popupMain';
 
-const MatchingEditForm = () => {
+const MatchingEditForm = ({matching, matchingRepository, addData}) => {
   return(
-    <PopupMain />
-  );
+    <PopupMain matching={matching} matchingRepository={matchingRepository} addData={addData}/>);
 }
-  
+
 
 export default MatchingEditForm;
