@@ -1,9 +1,9 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MatchingEditForm from '../matching_edit_form/matching_edit_form';
 import gymImg from "./gymImg.jpeg";
 import styles from './matching.module.css';
+
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
@@ -11,9 +11,10 @@ const Matching = ({ matching, matchingRepository, addData }) => {
   const {time, process, phone, significant,maxpeople,fileName,fileURL} = matching;
   const url = fileURL || DEFAULT_IMAGE;
 
-  const navigateState = useNavigate().state;
-  const [userId, setUesrId] = useState(navigateState && navigateState.id);
-return(
+
+  
+
+  return(
   <>
     <li className={styles.matchingBox}>
     <img src={url} alt="gymImg" className={styles.gymImg} />

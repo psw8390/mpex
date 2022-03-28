@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import styles from './matching_preview.module.css';
 import PopupMain from '../popupMain/popupMain';
 import Calendar from '../datepicker/datepicker';
 import Matching from '../matching/matching';
-import MatchingEditForm from '../matching_edit_form/matching_edit_form';
-import { createDependency } from 'webpack/lib/SingleEntryPlugin';
+import { db } from "../../service/firebase";
+import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/firestore/lite";
 
 
 const MatchingPreview = ({matchingRepository, addData}) => {
@@ -20,26 +20,7 @@ const MatchingPreview = ({matchingRepository, addData}) => {
       fileName: 'gym123',
       fileURL: 'gymimg'
     },
-    {
-      id: '2',
-      time: '10:00~11:00',
-      process: '5:5 풀코트',
-      phone: '010-0000-0000',
-      significant: '게스트비:5000원',
-      maxpeople: '15명',
-      fileName: 'gym123',
-      fileURL: null
-    },
-    {
-      id: '3',
-      time: '11:00~12:00',
-      process: '5:5 풀코트',
-      phone: '010-0000-0000',
-      significant: '게스트비:5000원',
-      maxpeople: '15명',
-      fileName: 'gym123',
-      fileURL: null
-    }
+    
   ])
 
   const navigateState = useNavigate().state;
@@ -53,6 +34,38 @@ const MatchingPreview = ({matchingRepository, addData}) => {
     });
   matchingRepository.saveMatching(userId, matching);
   }
+
+
+  {/* 데이터 읽기 */}
+  useEffect(async() => {
+    const query = await getDocs(collection(db, 'users'));
+    query.forEach((doc) => {
+
+      console.log(doc.data());
+    });
+  });
+
+  {/*
+  useEffect(async() => {
+    const docRef = await addDoc(collection(db, 'users'), {
+      completed: false,
+      text: "new"
+    })
+  }, []);
+
+  useEffect(async() => {
+    const docRef = doc(db, "users", "1zyHYn63yjtLvfjv9hKi");
+    await updateDoc(docRef, {
+      fileName: 'true',
+    });
+  }, []);
+
+  useEffect(async() => {
+    const docRef = doc(db, "users", "tIPAllLXj4Y7hs4b7Z5z");
+    await deleteDoc(docRef);
+  }, []);
+*/}
+
 
   return (
 <div className={styles.matchingPreviewBox}>

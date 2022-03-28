@@ -17,7 +17,6 @@ function PopupContent(props) {
           <div>
             <button type="button" onClick={onClose}>취소</button>
             <button type="submit" onClick={onClose}>등록하기</button>
-            <button type="submit" onClick={addData}>쓰기</button>
           </div>
         </div>
       </div>
