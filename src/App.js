@@ -47,7 +47,6 @@ function App({authService}) {
         <Route exact path='/community' element={<Community />} />
       </Routes>
     </BrowserRouter>
-    <button onClick={addData}>추가</button>
     </div>
   );
 }

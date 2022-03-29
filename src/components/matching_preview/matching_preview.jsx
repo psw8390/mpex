@@ -36,22 +36,10 @@ const MatchingPreview = ({matchingRepository, addData}) => {
   }
 
 
-  {/* 데이터 읽기 */}
-  useEffect(async() => {
-    const query = await getDocs(collection(db, 'users'));
-    query.forEach((doc) => {
 
-      console.log(doc.data());
-    });
-  });
 
   {/*
-  useEffect(async() => {
-    const docRef = await addDoc(collection(db, 'users'), {
-      completed: false,
-      text: "new"
-    })
-  }, []);
+  
 
   useEffect(async() => {
     const docRef = doc(db, "users", "1zyHYn63yjtLvfjv9hKi");
