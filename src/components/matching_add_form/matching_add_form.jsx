@@ -17,7 +17,7 @@ function MatchingAddForm(props) {
           <input name='process' placeholder='진행방식:'></input>
           <input name='ask' placeholder='문의:'></input>
           <input name='nstr' placeholder='특이사항:'></input>
-          <input name='max-people' placeholder='모집인원:'></input>
+          <input name='maxPeople' placeholder='모집인원:'></input>
         </div>
       </div>
     </div>

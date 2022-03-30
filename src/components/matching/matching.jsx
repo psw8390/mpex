@@ -4,24 +4,21 @@ import MatchingEditForm from '../matching_edit_form/matching_edit_form';
 import gymImg from "./gymImg.jpeg";
 import styles from './matching.module.css';
 import { db } from "../../service/firebase";
-import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/firestore/lite";
-
+import { doc, deleteDoc} from "firebase/firestore/lite";
 
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
-const Matching = ({ matching, matchingRepository, addData }) => {
-  const {time, process, phone, significant,maxpeople,fileName,fileURL} = matching;
+const Matching = ({ matchingRead, matchingRepository, setMatchingRead, list }) => {
+  const {time, place, process, ask,nstr,maxPeople,fileURL, id} = matchingRead;
   const url = fileURL || DEFAULT_IMAGE;
 
-  {/* 데이터 읽기 */}
-  useEffect(async() => {
-    const query = await getDocs(collection(db, 'users'));
-    query.forEach((doc) => {
-      console.log(doc.data());
-    });
-  });
-  
+  const deleteMatching = () => {
+    const docRef = doc(db, "users", id);
+    deleteDoc(docRef);
+    const arr = list.filter(e => e.id !== id)
+    setMatchingRead(arr)
+  }
 
   return(
   <>
@@ -29,18 +26,23 @@ const Matching = ({ matching, matchingRepository, addData }) => {
     <img src={url} alt="gymImg" className={styles.gymImg} />
     <div className={styles.matchingInfo}>
       <div>시간: {time}</div>
+      <div>장소: {place}</div>
       <div>진행방식: {process}</div>
-      <div>문의: {phone}</div>
-      <div>특이사항: {significant}</div>
-      <div>최대인원:{maxpeople}</div>
+      <div>문의: {ask}</div>
+      <div>특이사항:{nstr}</div>
+      <div>최대인원:{maxPeople}</div>
     </div>
 
     <div className={styles.matchingUI}>
       <button className={styles.deleteUI}>
-        <MatchingEditForm matching={matching} matchingRepository={matchingRepository} addData={addData}/>,
+        수정하기
+      </button>
+      <button className={styles.deleteUI} onClick={deleteMatching}> 
+        삭제
       </button>
     </div>
     </li>
+    
   </>
   );
 }

@@ -6,7 +6,7 @@ import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/
 
 
 function PopupContent(props) {
-  const {matchingRepository, addData, onClose} = props;
+  const {matchingRepository, onClose, getList} = props;
   const [time, setTime] = useState('')
 
   const [matching, setMatching] = useState();
@@ -14,7 +14,11 @@ function PopupContent(props) {
     e.preventDefault();
     setMatching({
       time: e.target.time.value,
-      place: e.target.place.value
+      place: e.target.place.value,
+      process: e.target.process.value,
+      ask: e.target.ask.value,
+      nstr: e.target.nstr.value,
+      maxPeople: e.target.maxPeople.value,
     })
   }
 
@@ -22,6 +26,7 @@ function PopupContent(props) {
     const docRef = await addDoc(collection(db, 'users'), 
       {matching}
     )
+    getList();
     onClose();
   });
 

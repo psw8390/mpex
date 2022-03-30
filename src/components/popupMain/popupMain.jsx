@@ -3,7 +3,7 @@ import PopupDom from '../popupDom/popupDom';
 import PopupContent from '../popupContent/popupContent';
 
 function PopupMain(props) {
-  const {matchingRepository, addData} = props;
+  const {matchingRepository, addData, getList} = props;
   const [isOpenPopup, setIsOpenPopup] = useState(false)
 
   const openPopup = () => {
@@ -27,7 +27,7 @@ function PopupMain(props) {
                 <PopupDom matchingRepository={matchingRepository}
                 addData={addData}>
                     <PopupContent  onClose={() => closePopup()} matchingRepository={matchingRepository}
-                    addData={addData}/>
+                    addData={addData} getList={getList}/>
                 </PopupDom>
             }
         </div>

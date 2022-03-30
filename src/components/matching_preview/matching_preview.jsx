@@ -9,38 +9,35 @@ import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/
 
 
 const MatchingPreview = ({matchingRepository, addData}) => {
-  const [matchings, setMatchings] = useState([
-    {
-      id: '1',
-      time: '09:00~10:00',
-      process: '5:5 풀코트',
-      phone: '010-0000-0000',
-      significant: '게스트비:5000원',
-      maxpeople: '15명',
-      fileName: 'gym123',
-      fileURL: 'gymimg'
-    },
-    
-  ])
-
   const navigateState = useNavigate().state;
   const [userId, setUserId] = useState(navigateState && navigateState.id);
 
-  const createOrUpdateMatching = matching => {
-    setMatchings(matchings => {
-      const updated = { ...matchings };
-      updated[ matching.id] = matching;
-      return updated;
+  // const createOrUpdateMatching = matching => {
+  //   setMatchings(matchings => {
+  //     const updated = { ...matchings };
+  //     updated[ matching.id] = matching;
+  //     return updated;
+  //   });
+  // matchingRepository.saveMatching(userId, matching);
+  // }
+
+{/* 데이터 읽기 */}
+const [matchingRead, setMatchingRead] = useState([]);
+useEffect(() => {
+    getList()
+  }, []);
+
+  const getList = async() => {
+    const query = await getDocs(collection(db, 'users'));
+    const arr = []
+    query.forEach((doc) => {
+      arr.push({...doc.data().matching, id: doc.id})
     });
-  matchingRepository.saveMatching(userId, matching);
+    setMatchingRead(arr)
   }
 
 
-
-
   {/*
-  
-
   useEffect(async() => {
     const docRef = doc(db, "users", "1zyHYn63yjtLvfjv9hKi");
     await updateDoc(docRef, {
@@ -56,30 +53,32 @@ const MatchingPreview = ({matchingRepository, addData}) => {
 
 
   return (
-<div className={styles.matchingPreviewBox}>
-  {/* 매칭등록,캘린더 */}
-  <div className={styles.matchingUiBox}>
-    <div className={styles.matchingRegisterBox}>
-      <div className={styles.tagSectionContainer}>
-          <PopupMain matchings={matchings} matchingRepository={matchingRepository}
-          addData={addData} />
-      </div>
-      <div className={styles.tagSectionContainer}>
-        <div className={styles.tagSectionItem}>
-          <Calendar />
+    <div className={styles.matchingPreviewBox}>
+      {/* 매칭등록,캘린더 */}
+      <div className={styles.matchingUiBox}>
+        <div className={styles.matchingRegisterBox}>
+          <div className={styles.tagSectionContainer}>
+              <PopupMain matchingRepository={matchingRepository}
+              addData={addData} getList={getList}/>
+          </div>
+          <div className={styles.tagSectionContainer}>
+            <div className={styles.tagSectionItem}>
+              <Calendar />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <ul>
-    {
-      matchings.map(matching => (
-        <Matching matching={matching} matchingRepository={matchingRepository} addData={addData}/>
-      ))}
-  </ul>
+      
+      <ul>
+        {matchingRead.length === 0 
+        ? null 
+        : matchingRead.map(matching => {
+          return <Matching matchingRead={matching} setMatchingRead={setMatchingRead} list={matchingRead}/>
+        } 
+        )}
+      </ul>
 
-</div>
+    </div>
   )
 }
 
