@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './matching.module.css';
 import { db } from "../../service/firebase";
 import { doc, deleteDoc} from "firebase/firestore/lite";
-
+import ModifyBtn from '../modifyBtn/modifyBtn';
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
@@ -32,7 +32,7 @@ const Matching = ({ matchingRead, setMatchingRead, list }) => {
 
     <div className={styles.matchingUI}>
       <button className={styles.deleteUI}>
-        수정하기
+        <ModifyBtn />
       </button>
       <button className={styles.deleteUI} onClick={deleteMatching}> 
         삭제
