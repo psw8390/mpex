@@ -23,6 +23,7 @@ const MatchingPreview = () => {
     setMatchingRead(arr)
   }
 
+
   return (
     <div className={styles.matchingPreviewBox}>
       {/* 매칭등록,캘린더 */}
@@ -43,7 +44,7 @@ const MatchingPreview = () => {
         {matchingRead.length === 0 
         ? null 
         : matchingRead.map(matching => {
-          return <Matching matchingRead={matching} setMatchingRead={setMatchingRead} list={matchingRead}/>
+          return <Matching matchingRead={matching} setMatchingRead={setMatchingRead} list={matchingRead} getList={getList}/>
         } 
         )}
       </ul>

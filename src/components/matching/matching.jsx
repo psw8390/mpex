@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './matching.module.css';
 import { db } from "../../service/firebase";
-import { doc, deleteDoc} from "firebase/firestore/lite";
+import { doc, deleteDoc, updateDoc } from "firebase/firestore/lite";
 import ModifyBtn from '../modifyBtn/modifyBtn';
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
-const Matching = ({ matchingRead, setMatchingRead, list }) => {
+const Matching = ({ matchingRead, setMatchingRead, list, getList }) => {
   const {time, place, process, ask, nstr, maxPeople,fileURL, id} = matchingRead;
   const url = fileURL || DEFAULT_IMAGE;
 
@@ -16,6 +16,8 @@ const Matching = ({ matchingRead, setMatchingRead, list }) => {
     const arr = list.filter(e => e.id !== id)
     setMatchingRead(arr)
   }
+
+
 
   return(
   <>
@@ -31,8 +33,8 @@ const Matching = ({ matchingRead, setMatchingRead, list }) => {
     </div>
 
     <div className={styles.matchingUI}>
-      <button className={styles.deleteUI}>
-        <ModifyBtn />
+      <button className={styles.deleteUI} >
+        <ModifyBtn id={id} getList={getList} matchingRead={matchingRead}/>
       </button>
       <button className={styles.deleteUI} onClick={deleteMatching}> 
         삭제

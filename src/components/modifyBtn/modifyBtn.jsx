@@ -1,10 +1,12 @@
 import React from 'react';
 import ModifyPopupMain from '../modifyPopupMain/modifyPopupMain';
 
-const ModifyBtn = ({matching, matchingRepository, addData}) => {
+const ModifyBtn = ({id, getList, modifyMatching, matchingRead}) => {
   return(
-    <ModifyPopupMain matching={matching} matchingRepository={matchingRepository} addData={addData}/>);
+    <ModifyPopupMain id={id} getList={getList} modifyMatching={modifyMatching} matchingRead={matchingRead}/>);
 }
+
+
 
 
 export default ModifyBtn;

@@ -3,7 +3,7 @@ import ModifyPopupDom from '../modifyPopupDom/modifyPopupDom';
 import ModifyPopupContent from '../modifyPopupContent/modifyPopupContent';
 
 function ModifyPopupMain(props) {
-  const {getList} = props;
+  const {getList, id, modifyMatching, matchingRead} = props;
   const [isOpenPopup, setIsOpenPopup] = useState(false)
 
   const openPopup = () => {
@@ -13,6 +13,7 @@ function ModifyPopupMain(props) {
   const closePopup = () => {
     setIsOpenPopup(false)
   }
+
 
   return(
     <div>
@@ -29,6 +30,9 @@ function ModifyPopupMain(props) {
               <ModifyPopupContent  
                       onClose={() => closePopup()} 
                       getList={getList}
+                      id={id}
+                      modifyMatching={modifyMatching}
+                      matchingRead={matchingRead}
               />
             </ModifyPopupDom>
           }
