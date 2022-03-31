@@ -17,7 +17,7 @@ function Navbar({authService}) {
   useEffect(() => {
     authService.onAuthChange(user => {
       if(user) {
-        setUserId(user.uid);
+        setUserId(userId);
       } else {
         navigate('/');
       }

@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react';
 import MatchingAddForm from '../matching_add_form/matching_add_form';
 import styles from './popupContent.module.css';
 import { db } from "../../service/firebase";
-import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/firestore/lite";
+import { collection, addDoc } from "firebase/firestore/lite";
 
 
 function PopupContent(props) {
-  const {matchingRepository, onClose, getList} = props;
+  const {onClose, getList} = props;
   const [time, setTime] = useState('')
 
   const [matching, setMatching] = useState();
@@ -26,7 +26,7 @@ function PopupContent(props) {
     const docRef = await addDoc(collection(db, 'users'), 
       {matching}
     )
-    getList();
+    getList(docRef);
     onClose();
   });
 
@@ -36,7 +36,7 @@ function PopupContent(props) {
         <form className={styles.common_alert} onSubmit={onSubmit}> 
           <h2>매칭 등록 신청</h2>
           <div>
-            <MatchingAddForm matchingRepository={matchingRepository} setTime={setTime} time={time}/>
+            <MatchingAddForm setTime={setTime} time={time}/>
           </div>
           <div>
             <button type="button" onClick={onClose}>취소</button>

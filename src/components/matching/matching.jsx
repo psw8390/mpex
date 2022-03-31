@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import MatchingEditForm from '../matching_edit_form/matching_edit_form';
-import gymImg from "./gymImg.jpeg";
+import React from 'react';
 import styles from './matching.module.css';
 import { db } from "../../service/firebase";
 import { doc, deleteDoc} from "firebase/firestore/lite";
@@ -9,8 +6,8 @@ import { doc, deleteDoc} from "firebase/firestore/lite";
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
-const Matching = ({ matchingRead, matchingRepository, setMatchingRead, list }) => {
-  const {time, place, process, ask,nstr,maxPeople,fileURL, id} = matchingRead;
+const Matching = ({ matchingRead, setMatchingRead, list }) => {
+  const {time, place, process, ask, nstr, maxPeople,fileURL, id} = matchingRead;
   const url = fileURL || DEFAULT_IMAGE;
 
   const deleteMatching = () => {

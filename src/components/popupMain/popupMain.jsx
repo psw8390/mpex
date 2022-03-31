@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PopupDom from '../popupDom/popupDom';
 import PopupContent from '../popupContent/popupContent';
 
 function PopupMain(props) {
-  const {matchingRepository, addData, getList} = props;
+  const {getList} = props;
   const [isOpenPopup, setIsOpenPopup] = useState(false)
 
   const openPopup = () => {
@@ -16,21 +16,23 @@ function PopupMain(props) {
 
   return(
     <div>
-        <div>
-            <button type="button"
-                    id="popupDom"
-                    onClick={() => openPopup()}
-            >
-                매칭 등록
-            </button>
-            {isOpenPopup &&
-                <PopupDom matchingRepository={matchingRepository}
-                addData={addData}>
-                    <PopupContent  onClose={() => closePopup()} matchingRepository={matchingRepository}
-                    addData={addData} getList={getList}/>
-                </PopupDom>
-            }
-        </div>
+      <div>
+        <button 
+          type="button"
+          id="popupDom"
+          onClick={() => openPopup()}
+        >
+          매칭 등록
+        </button>
+          {isOpenPopup &&
+            <PopupDom>
+              <PopupContent  
+                      onClose={() => closePopup()} 
+                      getList={getList}
+              />
+            </PopupDom>
+          }
+      </div>
     </div>
 );
 }

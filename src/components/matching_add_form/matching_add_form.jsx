@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from './matching_add_form.module.css';
 
 
-function MatchingAddForm(props) {
+function MatchingAddForm() {
   return(
     <div className={styles.matchingAddFormBox}>
       <div className={styles.matchigBox} >

@@ -5,34 +5,9 @@ import Home from './components/home';
 import Notice from './components/notice';
 import Community from './components/community';
 import Login from './components/login/login';
-import MatchingRepository from '../src/service/matching_repository';
-import { db } from "../src/service/firebase";
-import { collection, addDoc } from "firebase/firestore/lite";
 
 
 function App({authService}) {
-  const usersCollectionRef = collection(db, "users");
-  const addData = async () => {
-    try {
-      const docRef = await addDoc(collection(db, "users"), {
-        id: Math.random(),
-        time: '09:00~10:00',
-        process: '5:5 풀코트',
-        phone: '010-0000-0000',
-        significant: '게스트비:5000원',
-        maxpeople: '15명',
-        fileName: 'gym123',
-        fileURL: 'gymimg'
-      });
-    } catch (e) {
-
-    }
-  }
-
-  
-
-  const matchingRepository = new MatchingRepository();
-
 
   return (
     <div className={styles.app}>
@@ -40,9 +15,9 @@ function App({authService}) {
       <Routes>
         <Route 
           exact path='/' 
-          element={<Login authService={authService}  matchingRepository = {matchingRepository}/>} 
+          element={<Login authService={authService} />} 
         />
-        <Route exact path='/home' element={<Home authService={authService} matchingRepository={matchingRepository} addData={addData} />} />
+        <Route exact path='/home' element={<Home authService={authService} />} />
         <Route exact path='/notice' element={<Notice />} />
         <Route exact path='/community' element={<Community />} />
       </Routes>
