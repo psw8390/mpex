@@ -1,19 +1,14 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
-import HomeBanner from './homeBanner/homeBanner';
-import Footer from './footer/footer';
 
-class Comminity extends React.Component {
-  render() {
-    return(
-      <div >
-        <Navbar />
-        <HomeBanner />
-        업데이트중...
-        <Footer />
-    </div>
-    )
-  }
-}
+const Community = ({authService}) => {
+  return(
+    <>
+      <Navbar authService={authService}/>
+        공사중..
+    </>
+  )   
+};
 
-export default Comminity;
+export default Community;
+

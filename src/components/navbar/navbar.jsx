@@ -49,7 +49,7 @@ function Navbar({authService}) {
           </div>
         </Link>
 
-        <Link to='/community' className={styles.contentsBox}>
+        <Link to='/spare' className={styles.contentsBox}>
           <div className={styles.contentBox}>
             예비
           </div>

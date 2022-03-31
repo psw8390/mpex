@@ -4,7 +4,9 @@ import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Home from './components/home';
 import Notice from './components/notice';
 import Community from './components/community';
+import Spare from './components/spare';
 import Login from './components/login/login';
+
 
 
 function App({authService}) {
@@ -18,8 +20,9 @@ function App({authService}) {
           element={<Login authService={authService} />} 
         />
         <Route exact path='/home' element={<Home authService={authService} />} />
-        <Route exact path='/notice' element={<Notice />} />
-        <Route exact path='/community' element={<Community />} />
+        <Route exact path='/notice' element={<Notice authService={authService}/>} />
+        <Route exact path='/community' element={<Community authService={authService}/>} />
+        <Route exact path='/spare' element={<Spare authService={authService}/>} />
       </Routes>
     </BrowserRouter>
     </div>

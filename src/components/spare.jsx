@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
 
-const Notice = ({authService}) => {
+const Spare = ({authService}) => {
   return(
     <>
       <Navbar authService={authService}/>
@@ -10,5 +10,5 @@ const Notice = ({authService}) => {
   )   
 };
 
-export default Notice;
+export default Spare;
 
