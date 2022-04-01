@@ -21,7 +21,7 @@ function ModifyPopupContent(props) {
       maxPeople: e.target.maxPeople.value,
     })
   }
-
+  
   useEffect(async() => {
     const docRef = doc(db, "users", id);
     updateDoc(docRef, {
@@ -36,7 +36,8 @@ function ModifyPopupContent(props) {
     });
     getList();
     onClose();
-  });
+  }, [modifiedMatching]);
+
   
   return(
     <div className={styles.dimmed_layer_wrapper}>
