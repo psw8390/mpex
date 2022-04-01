@@ -8,8 +8,8 @@ import { doc, updateDoc } from "firebase/firestore/lite";
 function ModifyPopupContent(props) {
   const {onClose, matchingRead, id, getList} = props;
   const [time, setTime] = useState('')
-
   const [modifiedMatching, setModifiedMatching] = useState({});
+
   const onSubmit = (e) => {
     e.preventDefault();
     setModifiedMatching({
@@ -21,35 +21,34 @@ function ModifyPopupContent(props) {
       maxPeople: e.target.maxPeople.value,
     })
   }
-  
-  console.log(modifiedMatching.place);
 
-  const modifyMatching = (modifiedMatching) => {
+  useEffect(async() => {
     const docRef = doc(db, "users", id);
     updateDoc(docRef, {
       matching: {
-        time: "modifiedMatching.time",
-        place: "목포대",
-        process: "5:5",
-        ask: "010-0000-0000",
-        nstr: "게스트비",
-        maxPeople: "10명",
+        time: modifiedMatching.time ? modifiedMatching.time : matchingRead.time,
+        place: modifiedMatching.place ? modifiedMatching.place : matchingRead.place,
+        process: modifiedMatching.process ? modifiedMatching.process : matchingRead.precess,
+        ask: modifiedMatching.ask ? modifiedMatching.ask : matchingRead.ask,
+        nstr:modifiedMatching.nstr ? modifiedMatching.nstr : matchingRead.nstr,
+        maxPeople: modifiedMatching.maxPeople ? modifiedMatching.maxPeople : matchingRead.maxPeople,
       }
     });
-  }
-
-
+    getList();
+    onClose();
+  });
+  
   return(
     <div className={styles.dimmed_layer_wrapper}>
       <div className={styles.full_layer}>
         <form className={styles.common_alert} onSubmit={onSubmit}> 
           <h2>매칭 등록 신청</h2>
           <div>
-            <MatchingEditForm setTime={setTime} time={time} modifyMatching={modifyMatching} matchingRead={matchingRead}/>
+            <MatchingEditForm setTime={setTime} time={time} matchingRead={matchingRead}/>
           </div>
           <div>
             <button type="button" onClick={onClose}>취소</button>
-            <input type="submit" value="등록" onClick={modifyMatching} onSubmit={onSubmit}/>
+            <input type="submit" value="등록"  onSubmit={onSubmit} />
           </div>
         </form>
       </div>

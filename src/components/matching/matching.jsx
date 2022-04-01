@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './matching.module.css';
 import { db } from "../../service/firebase";
-import { doc, deleteDoc, updateDoc } from "firebase/firestore/lite";
+import { doc, deleteDoc } from "firebase/firestore/lite";
 import ModifyBtn from '../modifyBtn/modifyBtn';
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
