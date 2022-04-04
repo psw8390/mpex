@@ -1,18 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import MatchingAddForm from '../matching_add_form/matching_add_form';
 import styles from './popupContent.module.css';
-import { db } from "../../service/firebase";
+import { db, storage } from "../../service/firebase";
 import { collection, addDoc } from "firebase/firestore/lite";
+import { getStorage,
+  ref as sRef,
+  uploadBytesResumable,
+  getDownloadURL,
+  deleteObject } from "firebase/storage";
 
 
 function PopupContent(props) {
   const {onClose, getList} = props;
   const [time, setTime] = useState('')
-
   const [matching, setMatching] = useState();
+
   const onSubmit = (e) => {
     e.preventDefault();
     setMatching({
+      image: e.target.image.value,
       time: e.target.time.value,
       place: e.target.place.value,
       process: e.target.process.value,
@@ -22,9 +28,10 @@ function PopupContent(props) {
     })
   }
 
+  
   useEffect(async() => {
     const docRef = await addDoc(collection(db, 'users'), 
-      {matching}
+    {matching}
     )
     getList(docRef);
     onClose();

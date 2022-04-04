@@ -21,8 +21,8 @@
 }
 
 .filebox input[type="file"] {
+  width: 200px;
   position: relative;
-  left: 50px;
 }
 
 .matchingInfo {

@@ -1,14 +1,18 @@
 import React from "react";
 import styles from './matching_add_form.module.css';
+import { storage } from '../../service/firebase';
+ 
 
 
 function MatchingAddForm() {
+  
+
   return(
     <div className={styles.matchingAddFormBox}>
       <div className={styles.matchigBox} >
         <div className={styles.filebox}> 
           <label htmlFor="ex_file" className='fileboxlabel'>체육관 이미지 업로드</label> 
-          <input type="file"></input>
+          <input type="file" name="image"></input>
         </div>
 
         <div className={styles.matchingInfo}>
