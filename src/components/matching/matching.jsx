@@ -33,9 +33,9 @@ const Matching = ({ matchingRead, setMatchingRead, list, getList }) => {
     </div>
 
     <div className={styles.matchingUI}>
-      <button className={styles.deleteUI} >
+      <div className={styles.deleteUI} >
         <ModifyBtn id={id} getList={getList} matchingRead={matchingRead}/>
-      </button>
+      </div>
       <button className={styles.deleteUI} onClick={deleteMatching}> 
         삭제
       </button>

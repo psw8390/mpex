@@ -48,7 +48,7 @@ function ModifyPopupContent(props) {
             <MatchingEditForm setTime={setTime} time={time} matchingRead={matchingRead}/>
           </div>
           <div>
-            <button type="button" onClick={onClose}>취소</button>
+            <button onClick={onClose}>취소</button>
             <input type="submit" value="등록"  onSubmit={onSubmit} />
           </div>
         </form>

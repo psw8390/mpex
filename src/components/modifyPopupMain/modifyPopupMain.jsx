@@ -18,13 +18,12 @@ function ModifyPopupMain(props) {
   return(
     <div>
       <div>
-        <button 
-          type="button"
+        <div 
           id="popupDom"
           onClick={() => openPopup()}
         >
           매칭 수정
-        </button>
+        </div>
           {isOpenPopup &&
             <ModifyPopupDom>
               <ModifyPopupContent  

@@ -44,7 +44,7 @@ const MatchingPreview = () => {
         {matchingRead.length === 0 
         ? null 
         : matchingRead.map(matching => {
-          return <Matching matchingRead={matching} setMatchingRead={setMatchingRead} list={matchingRead} getList={getList}/>
+          return <Matching matchingRead={matching} setMatchingRead={setMatchingRead} list={matchingRead} getList={getList} key="uniqueId1"/>
         } 
         )}
       </ul>

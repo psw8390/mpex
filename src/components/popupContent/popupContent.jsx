@@ -1,13 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import MatchingAddForm from '../matching_add_form/matching_add_form';
 import styles from './popupContent.module.css';
-import { db, storage } from "../../service/firebase";
+import { db } from "../../service/firebase";
 import { collection, addDoc } from "firebase/firestore/lite";
-import { getStorage,
-  ref as sRef,
-  uploadBytesResumable,
-  getDownloadURL,
-  deleteObject } from "firebase/storage";
 
 
 function PopupContent(props) {
@@ -46,7 +41,7 @@ function PopupContent(props) {
             <MatchingAddForm setTime={setTime} time={time}/>
           </div>
           <div>
-            <button type="button" onClick={onClose}>취소</button>
+            <button onClick={onClose}>취소</button>
             <input type="submit" value="등록" onSubmit={onSubmit} />
           </div>
         </form>
