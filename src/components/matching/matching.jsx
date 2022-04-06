@@ -17,6 +17,7 @@ const Matching = ({ matchingRead, setMatchingRead, list, getList }) => {
     setMatchingRead(arr)
   }
 
+  console.log(place);
 
 
   return(

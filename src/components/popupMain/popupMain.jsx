@@ -3,7 +3,7 @@ import PopupDom from '../popupDom/popupDom';
 import PopupContent from '../popupContent/popupContent';
 
 function PopupMain(props) {
-  const {getList} = props;
+  const { getList } = props;
   const [isOpenPopup, setIsOpenPopup] = useState(false)
 
   const openPopup = () => {

@@ -24,13 +24,14 @@ const MatchingPreview = () => {
   }
 
 
+
   return (
     <div className={styles.matchingPreviewBox}>
       {/* 매칭등록,캘린더 */}
       <div className={styles.matchingUiBox}>
         <div className={styles.matchingRegisterBox}>
           <div className={styles.tagSectionContainer}>
-              <PopupMain getList={getList}/>
+              <PopupMain getList={getList} />
           </div>
           <div className={styles.tagSectionContainer}>
             <div className={styles.tagSectionItem}>
@@ -44,7 +45,7 @@ const MatchingPreview = () => {
         {matchingRead.length === 0 
         ? null 
         : matchingRead.map(matching => {
-          return <Matching matchingRead={matching} setMatchingRead={setMatchingRead} list={matchingRead} getList={getList} key="uniqueId1"/>
+          return <Matching matchingRead={matching} setMatchingRead={setMatchingRead} list={matchingRead} getList={getList} />
         } 
         )}
       </ul>

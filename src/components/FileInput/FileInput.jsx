@@ -16,7 +16,7 @@ const FileInput = () => {
   const [previewURL, setPreviewURL] = useState("");
   const [preview, setPreview] = useState(null);
   const fileRef = useRef();
-
+  
   useEffect(() => {
     if (file !== "") {
       setPreview(
@@ -43,10 +43,9 @@ const FileInput = () => {
     const fileName = newName + uniqueKey
 
     reader.onloadend = () => {
-      setFile(file); //등록용
-      setFileName(fileName); //삭제용 
+      setFile(file); 
+      setFileName(fileName); 
       setPreviewURL(reader.result);
-
       saveToFirebaseStorage(file, metaData, fileName);
     };
     if (file) reader.readAsDataURL(file);
@@ -79,18 +78,20 @@ const FileInput = () => {
     );
   };
 
-  // 여기가 delete 코드입니다.
-  const deleteFile = () => {
-    const desertRef = ref(storage, "Images/" + fileName);
+  // // 여기가 delete 코드입니다.
+  // const deleteFile = () => {
+  //   const desertRef = ref(storage, "Images/" + fileName);
 
-    deleteObject(desertRef)
-      .then(() => {
-        console.log(`delete success`);
-      })
-      .catch(error => {
-        console.log(`delete ${error}`);
-      });
-  };
+  //   deleteObject(desertRef)
+  //     .then(() => {
+  //       console.log(`delete success`);
+  //     })
+  //     .catch(error => {
+  //       console.log(`delete ${error}`);
+  //     });
+  // };
+
+  
 
   return (
     <div>
@@ -104,8 +105,9 @@ const FileInput = () => {
           onChange={handleFileOnChange}
         ></input>
 
-        <button onClick={handleFileButtonClick}>UPLOAD</button>
-        <button onClick={deleteFile}>DELETE</button>
+        <button className={styles.uploadBtn} onClick={handleFileButtonClick}>UPLOAD</button>
+        
+        {/* <button className={styles.imgDelete}onClick={deleteFile}>DELETE</button> */}
       </div>
     </div>
   );

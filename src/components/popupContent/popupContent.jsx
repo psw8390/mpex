@@ -13,7 +13,6 @@ function PopupContent(props) {
   const onSubmit = (e) => {
     e.preventDefault();
     setMatching({
-      image: e.target.image.value,
       time: e.target.time.value,
       place: e.target.place.value,
       process: e.target.process.value,
