@@ -6,11 +6,11 @@ import {
   deleteObject
 } from "firebase/storage";
 import { storage } from "../../service/firebase";
-import styles from './FileInput.module.css';
+import styles from './FileInputModified.module.css';
 
 
 // storage를 가져옵니다. 처음 firebase init하는 코드에 넣지 않아도 됩니다.
-const FileInput = ({setUrl}) => {
+const FileInputModified = ({setUrl}) => {
   const [file, setFile] = useState("");
   const [fileName, setFileName] = useState("");
   const [previewURL, setPreviewURL] = useState("");
@@ -114,4 +114,4 @@ const FileInput = ({setUrl}) => {
   );
 };
 
-export default FileInput;
+export default FileInputModified;

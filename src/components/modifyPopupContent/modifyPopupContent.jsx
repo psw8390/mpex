@@ -9,10 +9,10 @@ function ModifyPopupContent(props) {
   const {onClose, matchingRead, id, getList} = props;
   const [time, setTime] = useState('')
   const [modifiedMatching, setModifiedMatching] = useState({});
-
   const onSubmit = (e) => {
     e.preventDefault();
     setModifiedMatching({
+      url: e.target.url.value,
       time: e.target.time.value,
       place: e.target.place.value,
       process: e.target.process.value,
@@ -21,11 +21,15 @@ function ModifyPopupContent(props) {
       maxPeople: e.target.maxPeople.value,
     })
   }
+
+  console.log(modifiedMatching);
+  
   
   useEffect(async() => {
     const docRef = doc(db, "users", id);
     updateDoc(docRef, {
       matching: {
+        url: modifiedMatching.url ? modifiedMatching.url : matchingRead.url,
         time: modifiedMatching.time ? modifiedMatching.time : matchingRead.time,
         place: modifiedMatching.place ? modifiedMatching.place : matchingRead.place,
         process: modifiedMatching.process ? modifiedMatching.process : matchingRead.precess,
@@ -45,7 +49,7 @@ function ModifyPopupContent(props) {
         <form className={styles.common_alert} onSubmit={onSubmit}> 
           <h2>매칭 등록 신청</h2>
           <div>
-            <MatchingEditForm setTime={setTime} time={time} matchingRead={matchingRead}/>
+            <MatchingEditForm setTime={setTime} time={time} matchingRead={matchingRead} />
           </div>
           <div>
             <button onClick={onClose}>취소</button>

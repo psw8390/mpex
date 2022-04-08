@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './matching.module.css';
 import { db } from "../../service/firebase";
 import { doc, deleteDoc } from "firebase/firestore/lite";
@@ -7,9 +7,8 @@ import ModifyBtn from '../modifyBtn/modifyBtn';
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
 const Matching = ({ matchingRead, setMatchingRead, list, getList }) => {
-  const {time, place, process, ask, nstr, maxPeople,fileURL, id} = matchingRead;
-  const url = fileURL || DEFAULT_IMAGE;
-
+  const {time, place, process, ask, nstr, maxPeople,url, id} = matchingRead;
+  const gymUrl = url || DEFAULT_IMAGE;
   const deleteMatching = () => {
     const docRef = doc(db, "users", id);
     deleteDoc(docRef);
@@ -17,13 +16,19 @@ const Matching = ({ matchingRead, setMatchingRead, list, getList }) => {
     setMatchingRead(arr)
   }
 
-  console.log(place);
+  // const handleUrl = () => {
+  //   const [modifiedUrl,setModifiedUrl] = useState('');
+  //   setModifiedUrl(url);
+  //   console.log(modifiedUrl);
+  // }
+  // handleUrl();
+
 
 
   return(
   <>
     <li className={styles.matchingBox}>
-    <img src={url} alt="gymImg" className={styles.gymImg} />
+    <img src={gymUrl} alt="gymImg" className={styles.gymImg} />
     <div className={styles.matchingInfo}>
       <div>시간: {time}</div>
       <div>장소: {place}</div>

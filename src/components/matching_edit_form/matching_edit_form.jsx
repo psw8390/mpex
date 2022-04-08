@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from './matching_edit_form.module.css';
+import FileInputModified from '../FileInput_modified/FileInputModified';
 
 function MatchingEditForm({matchingRead}) {
   const [time, setTime] = useState(matchingRead.time);
@@ -8,6 +9,7 @@ function MatchingEditForm({matchingRead}) {
   const [ask, setAsk] = useState(matchingRead.ask);
   const [nstr, setNstr] = useState(matchingRead.nstr);
   const [maxPeople, setMaxPeople] = useState(matchingRead.maxPeople);
+  const [url, setUrl] = useState(matchingRead.url);
 
   const onChangeT = (e) => {
     setTime(e.target.value);
@@ -31,12 +33,19 @@ function MatchingEditForm({matchingRead}) {
     setMaxPeople(e.target.value);
   }
 
+  const onChangeU = (e) => {
+    setUrl(e.target.value);
+    console.log('!!!', e.target.value);
+  }
+
+
+
   return(
     <div className={styles.matchingAddFormBox}>
       <div className={styles.matchigBox} >
         <div className={styles.filebox}> 
           <label htmlFor="ex_file" className='fileboxlabel'>체육관 이미지 업로드</label> 
-          <input type="file"></input>
+          <FileInputModified setUrl={setUrl} />
         </div>
 
         <div className={styles.matchingInfo}>
@@ -46,6 +55,7 @@ function MatchingEditForm({matchingRead}) {
           <input name='ask' onChange={onChangeA} value={ask}></input>
           <input name='nstr' onChange={onChangeS} value={nstr}></input>
           <input name='maxPeople' onChange={onChangeM} value={maxPeople}></input>
+          <input name='url' onChangeU={onChangeU} value={url}></input>
         </div>
       </div>
     </div>

@@ -1,0 +1,21 @@
+.imgPreview {
+  width: 201px;
+  height: 140px;
+  position: absolute;
+  top:120px;
+  left: 30px;
+}
+
+.imgDelete {
+  position: absolute;
+  top: 97px;
+  left: 30px;
+  color: red
+}
+
+.uploadBtn {
+  position: absolute;
+  top: 97px;
+  left: 30px;
+  color: red
+}
