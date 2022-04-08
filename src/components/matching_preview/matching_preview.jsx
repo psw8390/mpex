@@ -9,7 +9,7 @@ import { collection, getDocs } from "firebase/firestore/lite";
 
 const MatchingPreview = () => {
   const [matchingRead, setMatchingRead] = useState([]);
-  
+
   useEffect(() => {
       getList()
     }, []);
@@ -42,7 +42,7 @@ const MatchingPreview = () => {
         </div>
       </div>
       
-      <ul>
+      <ul className={styles.matchingUl}>
         {matchingRead.length === 0 
         ? null 
         : matchingRead.map(matching => {

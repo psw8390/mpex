@@ -22,7 +22,7 @@ function ModifyPopupMain(props) {
           id="popupDom"
           onClick={() => openPopup()}
         >
-          매칭 수정
+          수정
         </div>
           {isOpenPopup &&
             <ModifyPopupDom>

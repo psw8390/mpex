@@ -7,23 +7,29 @@ import {
 } from "firebase/storage";
 import { storage } from "../../service/firebase";
 import styles from './FileInputModified.module.css';
+import loadingImg from "./spinner.gif";
+
 
 
 // storage를 가져옵니다. 처음 firebase init하는 코드에 넣지 않아도 됩니다.
-const FileInputModified = ({setUrl}) => {
+const FileInputModified = ({setUrl, matchingRead, loading, setLoading }) => {
   const [file, setFile] = useState("");
   const [fileName, setFileName] = useState("");
   const [previewURL, setPreviewURL] = useState("");
   const [preview, setPreview] = useState(null);
   const fileRef = useRef();
   
+  console.log(matchingRead.url);
   useEffect(() => {
     if (file !== "") {
       setPreview(
         <img className={styles.imgPreview} src={previewURL} alt="previewImage" />
       );
+    } else {
+      setPreview(
+        <img className={styles.imgPreview} src={matchingRead.url} alt="previewImage" />
+      );
     }
-    return () => {};
   }, [file, previewURL]);
 
   const handleFileOnChange = event => {
@@ -46,6 +52,7 @@ const FileInputModified = ({setUrl}) => {
       setFile(file); 
       setFileName(fileName); 
       setPreviewURL(reader.result);
+      setLoading(true);
       saveToFirebaseStorage(file, metaData, fileName);
     };
     if (file) reader.readAsDataURL(file);
@@ -74,6 +81,7 @@ const FileInputModified = ({setUrl}) => {
         getDownloadURL(UploadTask.snapshot.ref).then(downloadUrl => {
           console.log(`완료 url: ${downloadUrl}`);
           setUrl(downloadUrl);
+          setLoading(false);
         });
       }
     );
@@ -96,7 +104,7 @@ const FileInputModified = ({setUrl}) => {
 
   return (
     <div>
-      <div className={styles.priviewRapping}>{preview}</div>
+      <div className={styles.priviewRapping}>{loading?<img className={styles.imgPreview} src={loadingImg} alt="previewImage" />:preview}</div>
       <div className={styles.priviewImg}>
         <input
           ref={fileRef}

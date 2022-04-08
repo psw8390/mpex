@@ -9,10 +9,13 @@ function ModifyPopupContent(props) {
   const {onClose, matchingRead, id, getList} = props;
   const [time, setTime] = useState('')
   const [modifiedMatching, setModifiedMatching] = useState({});
+  const [url, setUrl] = useState('');
+  const [loading, setLoading] = useState(false);
+  
   const onSubmit = (e) => {
     e.preventDefault();
     setModifiedMatching({
-      url: e.target.url.value,
+      url: url,
       time: e.target.time.value,
       place: e.target.place.value,
       process: e.target.process.value,
@@ -22,7 +25,6 @@ function ModifyPopupContent(props) {
     })
   }
 
-  console.log(modifiedMatching);
   
   
   useEffect(async() => {
@@ -47,13 +49,13 @@ function ModifyPopupContent(props) {
     <div className={styles.dimmed_layer_wrapper}>
       <div className={styles.full_layer}>
         <form className={styles.common_alert} onSubmit={onSubmit}> 
-          <h2>매칭 등록 신청</h2>
+          <h2>매칭 수정 신청</h2>
           <div>
-            <MatchingEditForm setTime={setTime} time={time} matchingRead={matchingRead} />
+            <MatchingEditForm setTime={setTime} time={time} matchingRead={matchingRead} setUrl={setUrl} loading={loading} setLoading={setLoading}/>
           </div>
           <div>
             <button onClick={onClose}>취소</button>
-            <input type="submit" value="등록"  onSubmit={onSubmit} />
+            <input type="submit" value="수정"  onSubmit={onSubmit} disabled={loading}/>
           </div>
         </form>
       </div>

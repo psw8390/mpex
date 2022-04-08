@@ -4,13 +4,13 @@ import styles from './matching_add_form.module.css';
  
 
 
-function MatchingAddForm({onSubmit, setUrl}) {
+function MatchingAddForm({onSubmit, setUrl, loading, setLoading}) {
   return(
     <div className={styles.matchingAddFormBox}>
       <div className={styles.matchigBox} >
         <div className={styles.filebox}> 
           <label  className={styles.fileboxLabel}>체육관 이미지 업로드</label> 
-          <FileInput  onSubmit={onSubmit} setUrl={setUrl}/>
+          <FileInput  onSubmit={onSubmit} setUrl={setUrl} loading={loading}setLoading={setLoading}/>
         </div>
 
         <div className={styles.matchingInfo}>

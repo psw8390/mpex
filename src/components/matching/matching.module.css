@@ -130,7 +130,7 @@
 }
 
 .deleteUI {
-  width: 100px;
+  width: 50px;
   height: 35px;
   display: flex;
   justify-content: center;
@@ -143,4 +143,5 @@
   text-decoration: none;
   color: black;
   font-size: 15px;
+  margin-right: 10px;
 }

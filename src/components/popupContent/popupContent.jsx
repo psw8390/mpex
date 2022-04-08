@@ -10,11 +10,12 @@ function PopupContent(props) {
   const [time, setTime] = useState('')
   const [matching, setMatching] = useState();
   const [imgUrl, setUrl] = useState('');
-  console.log(imgUrl);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
     setMatching({
+      createdAt: new Date().getTime(),
       url: imgUrl,
       time: e.target.time.value,
       place: e.target.place.value,
@@ -40,11 +41,11 @@ function PopupContent(props) {
         <form className={styles.common_alert} onSubmit={onSubmit}> 
           <h2>매칭 등록 신청</h2>
           <div>
-            <MatchingAddForm setTime={setTime} time={time} setUrl={setUrl}/>
+            <MatchingAddForm setTime={setTime} time={time} setUrl={setUrl} loading={loading} setLoading={setLoading}/>
           </div>
           <div>
             <button onClick={onClose}>취소</button>
-            <input type="submit" value="등록" onSubmit={onSubmit} />
+            <input type="submit" value="등록" onSubmit={onSubmit} disabled={loading}/>
           </div>
         </form>
       </div>

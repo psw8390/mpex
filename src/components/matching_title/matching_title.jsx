@@ -15,7 +15,7 @@ function MatchingTitle() {
   return (
     <section className={styles.matchingSection}>
       <h1 className={styles.matchingSectionTitle}>
-        매칭을 원하시는 날짜를 누르세요.
+        “무언가를 시작하기 위해 잘해야 하는 것은 아니지만, 무언가를 잘하기 위해 시작해야 합니다.” 
       </h1>
       <div className={styles.clock}>
         {time.toLocaleString()}
