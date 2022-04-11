@@ -1,5 +1,9 @@
 @value makerGrey from  './common/colors.css';
 
+* {
+  box-sizing: border-box;
+}
+
 .app {
   display: flex;
   flex-direction: column;

@@ -1,21 +1,33 @@
+@value mediaQuery from '../../common/size.css';
+@value makerPink from '../../common/colors.css';
+
 .navbar {
   width: 100%;
   background: white;
   color: black;
-  height: 60px;
-  justify-content: center;
   border: 1px solid #dee2e6;
+  display: flex;
+  justify-content:space-evenly;
 }
 
 .img {
   width: 80px;
   height: 60px;
+  margin-left: 10px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .navbar_contents {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
 }
 
 .contentsBox {
@@ -35,6 +47,11 @@
   color: black;
 }
 
+.contentBox:hover{
+  background-color: makerPink;
+  border-radius: 20px;
+}
+
 .logoutBtn {
   font-size: 12px;
   width: 60px;
@@ -44,4 +61,34 @@
   border: 1px solid black;
   cursor: pointer;
   margin-bottom: 3px;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar_logo {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar_contents {
+    flex-direction: column;
+  }
+
+  .contentBox:hover{
+    width:776px;
+    border-radius: 30px;;
+  }
+
+  .logoutBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

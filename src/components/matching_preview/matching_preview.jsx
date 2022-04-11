@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from './matching_preview.module.css';
 import PopupMain from '../popupMain/popupMain';
-import Calendar from '../datepicker/datepicker';
+// import Calendar from '../datepicker/datepicker';
 import Matching from '../matching/matching';
 import { db } from "../../service/firebase";
 import { collection, getDocs } from "firebase/firestore/lite";
@@ -34,11 +34,10 @@ const MatchingPreview = () => {
           <div className={styles.tagSectionContainer}>
               <PopupMain getList={getList} />
           </div>
-          <div className={styles.tagSectionContainer}>
+          {/* <div className={styles.tagSectionContainer}>
             <div className={styles.tagSectionItem}>
-              <Calendar />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       
