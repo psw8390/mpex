@@ -17,10 +17,12 @@
 }
 
 .hamburger {
-  display: none;
   cursor: pointer;
   margin-right: 10px;
   font-size: 20px;
+  position: absolute;
+  top:20px;
+  right: 20px;
 }
 
 .navbar_contents {
@@ -28,6 +30,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  border: 1px solid #dee2e6;
 }
 
 .contentsBox {
@@ -58,7 +61,7 @@
   height: 20px;
   color: black;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #dee2e6;
   cursor: pointer;
   margin-bottom: 3px;
 }
@@ -83,7 +86,7 @@
   }
 
   .contentBox:hover{
-    width:776px;
+    width: 776px;
     border-radius: 30px;;
   }
 

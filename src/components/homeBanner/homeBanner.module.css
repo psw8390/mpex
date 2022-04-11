@@ -1,10 +1,11 @@
+@value mediaQuery from '../../common/size.css';
+
+
 .homeBannerBox {
   width: 50%;
-  height: 69vh;
   display: flex;
   flex-direction: column;
   border: 1px solid #dee2e6;
-  overflow-y: scroll;
 }
 
 .homeBannerImg {
@@ -13,7 +14,6 @@
 }
 
 .paginationContainer {
-  height: 15%;
   display: flex;
 }
 
@@ -79,4 +79,16 @@
 
 .paginationContainer {
   border-bottom: 1px solid #dee2e6;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .homeBannerBox {
+    width: 100%;
+    max-height: 400px;
+
+  }
+
+  .homeBannerImg {
+    max-height: 300px;
+  }
 }

@@ -1,20 +1,26 @@
+@value mediaQuery from '../../common/size.css';
 @value makerWhite from '../../common/colors.css';
 
 .matchingSection {
-  display: flex;
   background-color: makerWhite;
   width: 100%;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.wiseSaying {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 
 .matchingSectionTitle {
-  width: 100%;
   height: 35px;
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: 1.05rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,4 +30,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
+
+}
+
+
+@media screen and (max-width: mediaQuery) {
+  .wiseSaying {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .matchingSectionTitle { 
+    font-size: 0.95em;
+  }
 }

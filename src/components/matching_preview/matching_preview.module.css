@@ -1,4 +1,7 @@
 @value makerWhite from '../../common/colors.css';
+@value mediaQuery from '../../common/size.css';
+
+
 .matchingUiBox {
   display: flex;
   justify-content: center;
@@ -215,4 +218,11 @@
   text-decoration: none;
   color: black;
   font-size: 15px;
+}
+
+
+@media screen and (max-width: mediaQuery) {
+  .matchingPreviewBox {
+    width: 100%;
+  }
 }

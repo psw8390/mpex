@@ -1,9 +1,17 @@
+@value mediaQuery from '../../common/size.css';
+
 .footerBox {
   width: 100%;
   background-color: #2f3740;
   color: #bdbdbd;
   border-top: 1px solid #dee2e6;
-  padding-left: 15px;
   padding-top: 5px;
-  height: 60px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .footerBox {
+    text-align: center;
+  }
 }
