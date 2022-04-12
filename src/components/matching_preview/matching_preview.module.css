@@ -1,6 +1,13 @@
 @value makerWhite from '../../common/colors.css';
 @value mediaQuery from '../../common/size.css';
 
+.matchingPreviewBox {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 60vh;
+  overflow-y: scroll;
+}
 
 .matchingUiBox {
   display: flex;
@@ -10,25 +17,10 @@
   margin-top: 10px;
 }
 
-.matchingRegisterBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .matchingUl {
   margin-right: 30px;;
-}
-
-.searchInput {
-  width: 500px;
-  height: 50px;
-  border-radius: 28px;
-  font-size: 1.2rem;
-  text-align: center;
-  background-color: rgba(29, 192, 120, 0.12);
-  border: 1px solid rgba(29, 192, 120, 0.24);
-  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
 }
 
 .buttonSubmit {
@@ -126,7 +118,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20%;
   font-size: 15px;
 }
 
@@ -161,13 +152,7 @@
   margin-bottom: 10px;
 }
 
-.matchingPreviewBox {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 60vh;
-  overflow-y: scroll;
-}
+
 
 .matchingBox {
   display: flex;
@@ -177,10 +162,6 @@
   margin-bottom: 10px;
 }
 
-.gymImg {
-  width: 200px;
-  height: 140px;
-}
 
 .matchingInfo {
   display: flex;

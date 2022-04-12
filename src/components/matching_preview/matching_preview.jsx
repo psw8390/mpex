@@ -28,7 +28,6 @@ const MatchingPreview = () => {
 
   return (
     <div className={styles.matchingPreviewBox}>
-      {/* 매칭등록,캘린더 */}
       <div className={styles.matchingUiBox}>
         <div className={styles.matchingRegisterBox}>
           <div className={styles.tagSectionContainer}>
@@ -49,7 +48,6 @@ const MatchingPreview = () => {
         } 
         )}
       </ul>
-
     </div>
   )
 }
