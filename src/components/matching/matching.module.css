@@ -9,7 +9,7 @@
 }
 
 .gymImg {
-  width: 50%;
+  width: 40%;
   max-width: 200px;
   height: 140px;
 }
@@ -30,47 +30,6 @@
   margin-top: 1px;
 }
 
-
-.mattchingUI {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 10%;
-  font-size: 15px;
-}
-
-.mattchingUI button {
-  width: 130px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #7f7f7f;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.mattchingUI a {
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-}
-
-.mattchingUI div {
-  width: 130px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #7f7f7f;
-  color: white;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
-
 .modifyUI, .deleteUI {
   width: 50px;
   height: 35px;
@@ -86,13 +45,5 @@
   color: black;
   font-size: 15px;
   margin-right: 10px;
-}
-
-@media screen and (max-width: mediaQuery) {
-  .gymImg {
-    width: 80px;
-  }
-
-
 }
 
