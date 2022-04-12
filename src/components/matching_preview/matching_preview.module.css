@@ -8,6 +8,16 @@
   overflow-y: scroll;
 }
 
+.registerBtn{
+  width: 100px;
+  height: 30px;
+  background-color: #E8EBEE;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .matchingUiBox {
   display: flex;
   justify-content: center;

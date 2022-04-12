@@ -30,7 +30,7 @@ const MatchingPreview = () => {
     <div className={styles.matchingPreviewBox}>
       <div className={styles.matchingUiBox}>
         <div className={styles.matchingRegisterBox}>
-          <div className={styles.tagSectionContainer}>
+          <div className={styles.registerBtn}>
               <PopupMain getList={getList} />
           </div>
           {/* <div className={styles.tagSectionContainer}>
