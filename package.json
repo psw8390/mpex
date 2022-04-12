@@ -1,5 +1,6 @@
 {
   "homepage": "https://psw9058.github.io/mpex",
+  basename = 'mpex';
   "name": "mpex",
   "version": "0.1.0",
   "private": true,
