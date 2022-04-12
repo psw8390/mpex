@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "9b56fab4cbd14624cbac",
-    "url": "/mpex/static/css/main.e3be72b8.chunk.css"
+    "revision": "059f4421a29625638b4f",
+    "url": "/mpex/static/css/main.1399ac05.chunk.css"
   },
   {
-    "revision": "9b56fab4cbd14624cbac",
+    "revision": "059f4421a29625638b4f",
     "url": "/mpex/static/js/main.f7a0171c.chunk.js"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/mpex/static/media/homeBannerImg.2145e62b.jpeg"
   },
   {
-    "revision": "b44a91cad2087b8969f9d10fc9e945cc",
+    "revision": "a6838341f7c33fd069dfe990fb5e831f",
     "url": "/mpex/index.html"
   }
 ];
