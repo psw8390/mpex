@@ -1,5 +1,5 @@
 {
-  "main.css": "/mpex/static/css/main.a720771f.chunk.css",
+  "main.css": "/mpex/static/css/main.27e45f31.chunk.css",
   "main.js": "/mpex/static/js/main.052d98ef.chunk.js",
   "main.js.map": "/mpex/static/js/main.052d98ef.chunk.js.map",
   "runtime~main.js": "/mpex/static/js/runtime~main.85b0a6a2.js",
@@ -7,9 +7,9 @@
   "static/js/2.039f6226.chunk.js": "/mpex/static/js/2.039f6226.chunk.js",
   "static/js/2.039f6226.chunk.js.map": "/mpex/static/js/2.039f6226.chunk.js.map",
   "index.html": "/mpex/index.html",
-  "precache-manifest.ee343d3f7dc349268c42625d39500971.js": "/mpex/precache-manifest.ee343d3f7dc349268c42625d39500971.js",
+  "precache-manifest.8b5740f0b85c2f46dcfa219c2dd207ed.js": "/mpex/precache-manifest.8b5740f0b85c2f46dcfa219c2dd207ed.js",
   "service-worker.js": "/mpex/service-worker.js",
-  "static/css/main.a720771f.chunk.css.map": "/mpex/static/css/main.a720771f.chunk.css.map",
+  "static/css/main.27e45f31.chunk.css.map": "/mpex/static/css/main.27e45f31.chunk.css.map",
   "static/media/home.jpeg": "/mpex/static/media/home.25725fdc.jpeg",
   "static/media/homeBannerImg.jpeg": "/mpex/static/media/homeBannerImg.2145e62b.jpeg"
 }
