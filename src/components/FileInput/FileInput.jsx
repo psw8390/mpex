@@ -3,7 +3,6 @@ import {
   ref,
   uploadBytesResumable,
   getDownloadURL,
-  deleteObject
 } from "firebase/storage";
 import { storage } from "../../service/firebase";
 import styles from './FileInput.module.css';
@@ -14,7 +13,7 @@ import loadingImg from "./spinner.gif";
 // storage를 가져옵니다. 처음 firebase init하는 코드에 넣지 않아도 됩니다.
 const FileInput = ({setUrl, loading, setLoading}) => {
   const [file, setFile] = useState("");
-  const [fileName, setFileName] = useState("");
+  const [setFileName] = useState("");
   const [previewURL, setPreviewURL] = useState("");
   const [preview, setPreview] = useState(null);
   

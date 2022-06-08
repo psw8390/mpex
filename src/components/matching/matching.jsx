@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './matching.module.css';
 import { db } from "../../service/firebase";
 import { doc, deleteDoc } from "firebase/firestore/lite";
