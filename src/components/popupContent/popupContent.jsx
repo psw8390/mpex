@@ -3,7 +3,7 @@ import MatchingAddForm from '../matching_add_form/matching_add_form';
 import styles from './popupContent.module.css';
 import { db } from "../../service/firebase";
 import { collection, addDoc } from "firebase/firestore/lite";
-
+import { useStore } from '../../store/store';
 
 function PopupContent(props) {
   const {onClose, getList } = props;
@@ -11,6 +11,8 @@ function PopupContent(props) {
   const [matching, setMatching] = useState();
   const [imgUrl, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const { increaseCount } = useStore();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +26,9 @@ function PopupContent(props) {
       nstr: e.target.nstr.value,
       maxPeople: e.target.maxPeople.value,
     })
+    increaseCount();
   }
+
 
   
   useEffect(async() => {

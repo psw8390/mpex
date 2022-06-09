@@ -30,6 +30,9 @@
   margin-right: 30px;;
 }
 
+.matchingRegisterBox {
+  display: flex;
+}
 
 
 @media screen and (max-width: mediaQuery) {

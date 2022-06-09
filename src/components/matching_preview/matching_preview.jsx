@@ -5,6 +5,7 @@ import PopupMain from '../popupMain/popupMain';
 import Matching from '../matching/matching';
 import { db } from "../../service/firebase";
 import { collection, getDocs } from "firebase/firestore/lite";
+import NumOfMatching from '../numOfMatching/numOfMatching';
 
 
 const MatchingPreview = () => {
@@ -33,10 +34,7 @@ const MatchingPreview = () => {
           <div className={styles.registerBtn}>
               <PopupMain getList={getList} />
           </div>
-          {/* <div className={styles.tagSectionContainer}>
-            <div className={styles.tagSectionItem}>
-            </div>
-          </div> */}
+          <NumOfMatching></NumOfMatching>
         </div>
       </div>
       

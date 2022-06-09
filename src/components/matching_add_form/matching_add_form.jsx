@@ -10,7 +10,7 @@ function MatchingAddForm({onSubmit, setUrl, loading, setLoading}) {
       <div className={styles.matchigBox} >
         <div className={styles.filebox}> 
           <label  className={styles.fileboxLabel}>체육관 이미지 업로드</label> 
-          <FileInput  onSubmit={onSubmit} setUrl={setUrl} loading={loading}setLoading={setLoading}/>
+          <FileInput  onSubmit={onSubmit} setUrl={setUrl} loading={loading} setLoading={setLoading}/>
         </div>
 
         <div className={styles.matchingInfo}>
