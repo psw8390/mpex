@@ -3,17 +3,22 @@ import styles from './matching.module.css';
 import { db } from "../../service/firebase";
 import { doc, deleteDoc } from "firebase/firestore/lite";
 import ModifyBtn from '../modifyBtn/modifyBtn';
+import { useStore } from '../../store/store';
+
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
 const Matching = ({ matchingRead, setMatchingRead, list, getList }) => {
   const {time, place, process, ask, nstr, maxPeople,url, id} = matchingRead;
   const gymUrl = url || DEFAULT_IMAGE;
+
+  const { decreaseCount } = useStore();
   const deleteMatching = () => {
     const docRef = doc(db, "users", id);
     deleteDoc(docRef);
     const arr = list.filter(e => e.id !== id)
-    setMatchingRead(arr)
+    setMatchingRead(arr);
+    decreaseCount();
   }
 
   // const handleUrl = () => {
@@ -22,7 +27,6 @@ const Matching = ({ matchingRead, setMatchingRead, list, getList }) => {
   //   console.log(modifiedUrl);
   // }
   // handleUrl();
-
 
 
   return(

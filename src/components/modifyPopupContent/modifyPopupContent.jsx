@@ -4,7 +4,6 @@ import styles from '../modifyPopupContent/modifyPopupContent.module.css';
 import { db } from "../../service/firebase";
 import { doc, updateDoc } from "firebase/firestore/lite";
 
-
 function ModifyPopupContent(props) {
   const {onClose, matchingRead, id, getList} = props;
   const [time, setTime] = useState('')
@@ -12,6 +11,7 @@ function ModifyPopupContent(props) {
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
   
+
   const onSubmit = (e) => {
     e.preventDefault();
     setModifiedMatching({
@@ -22,7 +22,7 @@ function ModifyPopupContent(props) {
       ask: e.target.ask.value,
       nstr: e.target.nstr.value,
       maxPeople: e.target.maxPeople.value,
-    })
+    });
   }
 
   

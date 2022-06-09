@@ -4,5 +4,6 @@ import create from 'zustand';
 export const useStore = create(set => ({
   count: 0,
   increaseCount: () => set(state => ({ count: state.count + 1 })),
-  setThree: (input) => set({ count: input }),
+  decreaseCount: () => set(state => ({ count: state.count - 1 })),
+  setZero: (input) => set({ count: input }),
 }));

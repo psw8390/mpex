@@ -1,13 +1,15 @@
 import React from 'react';
+import styles from "./numOfMatching.module.css";
+
 import { useStore } from '../../store/store';
 
 const NumOfMatching = () => {
-  const { count, setThree } = useStore();
+  const { count, setZero } = useStore();
 
   return (
-    <div>
+    <div className={styles.numBox}>
       <div>현재매칭: {count}개</div>
-      <button onClick={() => setThree(0)}>초기화</button>
+      <button onClick={() => setZero(0)}>Init</button>
     </div>
   );
 };
